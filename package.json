@@ -1,22 +1,22 @@
 {
-  "name": "swat-test",
+  "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/Krenichniy/swat-test",
+  "homepage": "https://Krenichniy.github.io/swat-test",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /swat-test.git/"
+    "build": "parcel build src/*.html --public-url /swat-test/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Krenichniy/swat-test.git"
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Krenichniy/swat-test/issues"
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
