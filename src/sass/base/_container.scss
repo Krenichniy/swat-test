@@ -9,9 +9,9 @@ body {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
-  min-width: 320px;
+  width: 100%;
 
   @include min480 {
     width: 480px;
@@ -19,11 +19,11 @@ body {
 
   @include min768 {
     width: 768px;
-    padding: 0 20px;
+    padding: 0 34px;
   }
 
-  @include min1200 {
-    width: 1200px;
+  @include min1280 {
+    width: 1100px;
     padding: 0 30px;
   }
 }

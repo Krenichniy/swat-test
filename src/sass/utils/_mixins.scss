@@ -53,8 +53,8 @@
   }
 }
 
-@mixin min1200 {
-  @media screen and (min-width: 1200px) {
+@mixin min1280 {
+  @media screen and (min-width: 1280px) {
     @content;
   }
 }
