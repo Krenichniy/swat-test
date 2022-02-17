@@ -39,19 +39,29 @@
   color: var(--main-text-color);
   margin: 46px 35px 0 35px;
 }
-.about__text {
+.about__text,
+.about__text--secondary {
   @include font(12px, 500, 1.62, null);
   color: var(--secondary-text-color);
-  margin: 46px 35px;
+  margin: 0px 35px;
+  margin-top: 46px;
+  &--secondary {
+    margin: 20px 35px 0 35px;
+  }
 }
 .about__button {
   margin: 46px;
   background: var(--main-white-color);
   border-radius: 22px;
+  padding: 15px 37px;
+  &:hover,
+  &:focus {
+    background-color: var(--light-btn-hover);
+  }
 }
 .about__button--text {
   @include font(16px, 700, 1.31, null);
-  //   display: flex;
+  //   display: flex;npm
   //   align-items: center;
   //   text-align: center;
 
