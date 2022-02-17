@@ -1,3 +1,9 @@
+@mixin adv-bg-2x {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
 .advantages {
   background: #fff5f6;
   padding-right: 70px;
@@ -10,12 +16,11 @@
     @include flex(flex, space-between, inherit);
 
     max-width: 230px;
-    // <---------------------   tablet    --------------------->
+
     @include min768 {
       flex-direction: row;
       max-width: 100%;
     }
-    // <--------------------- end tablet  --------------------->
   }
 
   &__item {
@@ -47,9 +52,9 @@
 
     // <---------------------  adv-icons  --------------------->
     $adv-img: (
-      '1': url('../images/721@1x.png'),
-      '2': url('../images/16kg@1x.png'),
-      '3': url('../images/84@1x.png'),
+      '1': '../images/721@',
+      '2': '../images/16kg@',
+      '3': '../images/84@',
     );
 
     $adv-img-w: (
@@ -60,8 +65,13 @@
 
     @for $i from 1 to 4 {
       &:nth-child(#{$i}) > .advantages__title::before {
-        background: map-get($adv-img, '#{$i}');
+        $bg: map-get($adv-img, '#{$i}');
+        background-image: #{'url("'}#{$bg}#{'1x.png")'};
         width: map-get($adv-img-w, '#{$i}');
+
+        @include adv-bg-2x {
+          background-image: #{'url("'}#{$bg}#{'2x.png")'};
+        }
       }
     }
     // <------------------- end adv-icons -------------------->
@@ -92,23 +102,19 @@
       content: '';
 
       background-repeat: no-repeat;
-      background-size: auto;
+      background-size: contain;
       width: 33px;
       height: 50px;
       display: block;
 
       margin-bottom: 16px;
-      // <---------------------   tablet    --------------------->
+
       @include min768 {
         margin-bottom: 36px;
       }
-      // <--------------------- end tablet  --------------------->
-      // <---------------------             --------------------->
-      // <---------------------   desktop   --------------------->
       @include min1280 {
         margin-bottom: 40px;
       }
-      // <--------------------- end desktop --------------------->
     }
   }
 
@@ -121,16 +127,11 @@
 
     color: var(--main-text-color);
 
-    // <---------------------   tablet    --------------------->
     @include min768 {
       font-size: 14px;
     }
-    // <--------------------- end tablet  --------------------->
-    // <---------------------             --------------------->
-    // <---------------------   desktop   --------------------->
     @include min1280 {
       font-size: 16px;
     }
-    // <--------------------- end desktop --------------------->
   }
 }
