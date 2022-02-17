@@ -1,9 +1,25 @@
 .about {
+  background-color: #fff5f6;
+  width: 100%;
+
+  //   height: 133px;
+  background-image: url(../images/milk-bg-mob@1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 80%;
+  //   position: absolute;
+  //   top: 90%;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/milk-bg-mob@2x.png);
+  }
 }
+
 .about__container {
+  position: relative;
+  z-index: 1;
 }
-.container {
-}
+// .container {
+// }
 .about__pre-title {
   @include font(18px, 400, 1.17, null);
   color: var(--sub-title-color);
@@ -15,20 +31,33 @@
   text-align: center;
   margin-top: 15px;
 }
-.about__cow {
-}
-.about__background {
-}
+// .about__cow {
+// }
+
 .about__description {
   @include font(12px, 500, 1.62, null);
   color: var(--main-text-color);
-  margin-top: 46px;
+  margin: 46px 35px 0 35px;
 }
 .about__text {
   @include font(12px, 500, 1.62, null);
   color: var(--secondary-text-color);
-  margin-top: 46px;
+  margin: 46px 35px;
 }
 .about__button {
-  margin-top: 46px;
+  margin: 46px;
+  background: var(--main-white-color);
+  border-radius: 22px;
 }
+.about__button--text {
+  @include font(16px, 700, 1.31, null);
+  //   display: flex;
+  //   align-items: center;
+  //   text-align: center;
+
+  color: var(--accent-color);
+  cursor: pointer;
+}
+// .about__background {
+//   //   background-position: center;
+// }
