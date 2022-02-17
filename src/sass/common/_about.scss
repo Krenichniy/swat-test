@@ -1,0 +1,34 @@
+.about {
+}
+.about__container {
+}
+.container {
+}
+.about__pre-title {
+  @include font(18px, 400, 1.17, null);
+  color: var(--sub-title-color);
+  text-align: center;
+}
+.about__title {
+  @include font(34px, 400, 1.15, null);
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 15px;
+}
+.about__cow {
+}
+.about__background {
+}
+.about__description {
+  @include font(12px, 500, 1.62, null);
+  color: var(--main-text-color);
+  margin-top: 46px;
+}
+.about__text {
+  @include font(12px, 500, 1.62, null);
+  color: var(--secondary-text-color);
+  margin-top: 46px;
+}
+.about__button {
+  margin-top: 46px;
+}
