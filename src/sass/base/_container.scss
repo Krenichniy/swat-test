@@ -1,0 +1,47 @@
+body {
+  color: var(--text-color);
+  background-color: var(--main-white-color);
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+
+  letter-spacing: 0.04em;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  min-width: 320px;
+
+  @include min480 {
+    width: 480px;
+  }
+
+  @include min768 {
+    width: 768px;
+  }
+
+  @include min1200 {
+    width: 1200px;
+  }
+}
+
+.section-title {
+  font-family: 'Titan One', sans-serif;
+
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: -1px;
+}
