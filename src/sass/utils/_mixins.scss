@@ -7,7 +7,7 @@
 
 @mixin flex($dis, $jc, $ali) {
   display: $dis;
-  justify-content: $js;
+  justify-content: $jc;
   align-items: $ali;
 }
 
