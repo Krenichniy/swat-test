@@ -1,0 +1,136 @@
+.advantages {
+  background: #fff5f6;
+  padding-right: 70px;
+
+  &__list {
+    // display: flex;
+    // justify-content: space-between;
+    flex-direction: column;
+
+    @include flex(flex, space-between, inherit);
+
+    max-width: 230px;
+    // <---------------------   tablet    --------------------->
+    @include min768 {
+      flex-direction: row;
+      max-width: 100%;
+    }
+    // <--------------------- end tablet  --------------------->
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 156px;
+
+    & + & {
+      margin-top: 38px;
+    }
+
+    @include min768 {
+      width: 180px;
+      height: 222px;
+
+      & + & {
+        margin-top: 0;
+
+        @include min1280 {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    @include min1280 {
+      width: 330px;
+      height: 222px;
+    }
+
+    // <---------------------  adv-icons  --------------------->
+    $adv-img: (
+      '1': url('../images/721@1x.png'),
+      '2': url('../images/16kg@1x.png'),
+      '3': url('../images/84@1x.png'),
+    );
+
+    $adv-img-w: (
+      '1': 33px,
+      '2': 50px,
+      '3': 44px,
+    );
+
+    @for $i from 1 to 4 {
+      &:nth-child(#{$i}) > .advantages__title::before {
+        background: map-get($adv-img, '#{$i}');
+        width: map-get($adv-img-w, '#{$i}');
+      }
+    }
+    // <------------------- end adv-icons -------------------->
+  }
+  &__title {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #d41443;
+
+    margin-bottom: 16px;
+
+    @include min768 {
+      font-size: 48px;
+      line-height: 55px;
+    }
+    @include min1280 {
+      font-size: 58px;
+      line-height: 66px;
+    }
+
+    &::before {
+      content: '';
+
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 33px;
+      height: 50px;
+      display: block;
+
+      margin-bottom: 16px;
+      // <---------------------   tablet    --------------------->
+      @include min768 {
+        margin-bottom: 36px;
+      }
+      // <--------------------- end tablet  --------------------->
+      // <---------------------             --------------------->
+      // <---------------------   desktop   --------------------->
+      @include min1280 {
+        margin-bottom: 40px;
+      }
+      // <--------------------- end desktop --------------------->
+    }
+  }
+
+  &__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 170%;
+
+    color: var(--main-text-color);
+
+    // <---------------------   tablet    --------------------->
+    @include min768 {
+      font-size: 14px;
+    }
+    // <--------------------- end tablet  --------------------->
+    // <---------------------             --------------------->
+    // <---------------------   desktop   --------------------->
+    @include min1280 {
+      font-size: 16px;
+    }
+    // <--------------------- end desktop --------------------->
+  }
+}
