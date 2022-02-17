@@ -1,0 +1,60 @@
+// --------------------------- Белая кнопка
+.first-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  color: var(--accent-color);
+  border-radius: 22px;
+  background-color: var(--main-white-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--light-btn-hover);
+  }
+}
+
+.first-btn__start {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(21 / 16);
+  padding: 19px 37px 17px 37px;
+
+}
+
+.first-btn__finish {
+fill: var(--accent-color);
+  margin-left: 12px;
+}
+
+// --------------------------- Малиновая кнопка 
+.second-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  color: var(--main-white-color);
+  border-radius: 22px;
+  background-color: var(--loc-hov-btn);
+
+  &:hover,
+  &:focus {
+    background-color: var(--dark-btn-hover);
+  }
+}
+
+.second-btn__start {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(21 / 16);
+  padding: 19px 36px 17px 36px;
+}
+
+.second-btn__finish {
+  fill: var(--main-white-color);
+  margin-left: 12px;
+}
