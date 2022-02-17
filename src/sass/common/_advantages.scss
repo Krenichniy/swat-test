@@ -78,11 +78,7 @@
   }
   &__title {
     font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 41px;
-    letter-spacing: 0.04em;
+    @include font(36px, normal, calc(41 / 36), 0.04em);
     text-transform: uppercase;
 
     color: #d41443;
@@ -120,10 +116,8 @@
 
   &__text {
     font-family: DM Sans;
-    font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 170%;
+    @include font(12px, bold, 170%, inherit);
 
     color: var(--main-text-color);
 
