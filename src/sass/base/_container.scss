@@ -19,10 +19,12 @@ body {
 
   @include min768 {
     width: 768px;
+    padding: 0 20px;
   }
 
   @include min1200 {
     width: 1200px;
+    padding: 0 30px;
   }
 }
 
