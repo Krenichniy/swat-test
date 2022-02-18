@@ -1,0 +1,46 @@
+// --------------------------- Белая кнопка
+.first-btn {
+@include flex (flex, center, center);
+ color: var(--accent-color);
+ border-radius: 22px;
+ background-color: var(--main-white-color);
+ 
+  &:hover,
+  &:focus {
+    background-color: var(--light-btn-hover);
+  }
+}
+
+.first-btn__start {
+  @include font (16px, 700, 1.31);
+  padding: 19px 37px 17px 37px;
+  
+}
+
+.first-btn__finish {
+fill: var(--accent-color);
+  margin-left: 12px;
+}
+
+// --------------------------- Малиновая кнопка 
+.second-btn {
+  @include flex (flex, center, center);
+    color: var(--main-white-color);
+    border-radius: 22px;
+    background-color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--dark-btn-hover);
+  }
+}
+
+.second-btn__start {
+    @include font (16px, 700, 1.31);
+    padding: 19px 36px 17px 36px;
+}
+
+.second-btn__finish {
+  fill: var(--main-white-color);
+  margin-left: 12px;
+}
