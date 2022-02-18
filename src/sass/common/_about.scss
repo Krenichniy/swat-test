@@ -1,8 +1,8 @@
 .about {
+  padding: 125px 0 20px 0;
   background-color: #fff5f6;
   width: 100%;
 
-  //   height: 133px;
   background-image: url(../images/milk-bg-mob@1x.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -18,9 +18,6 @@
       background-image: url(../images/milk-bg-desktop@2x.png);
     }
   }
-  @include min1200 {
-    background-size: cover;
-  }
 }
 
 .about__container {
@@ -28,119 +25,117 @@
 }
 .about__wrapper-content {
   @include min768 {
-    @include flex(flex, center, center);
+    @include flex(flex, center, null);
+    margin-top: 50px;
+  }
+  @include min1200 {
+    margin-top: 55px;
   }
 }
 .about__cow-wrapper {
-  @include min768 {
-    width: 340px;
-    height: 340px;
-  }
-  @include min1200 {
-    width: 516px;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    @include flex(flex, center, null);
   }
 }
-// .container {
-// }
+
 .about__text-wrapper {
+  margin: 0 35px;
   @include min768 {
     max-width: 340px;
-    margin-right: 17px;
+    margin: 50px 0 0 17px;
+    // margin-right: 17px;
+  }
+  @include min1200 {
+    max-width: 463px;
+    margin-left: 74px;
   }
 }
 .about__pre-title {
   @include font(18px, 400, 1.17, null);
   color: var(--sub-title-color);
   text-align: center;
+  @include min768 {
+    @include font(26px, 400, 1.15, null);
+  }
+  @include min1200 {
+    @include font(30px, 400, 1.13, null);
+  }
 }
 .about__title {
   @include font(34px, 400, 1.15, null);
   color: var(--accent-color);
   text-align: center;
   margin-top: 15px;
+  @include min768 {
+    @include font(48px, 400, 1.14, null);
+  }
+  @include min1200 {
+    @include font(58px, 400, 1.14, 0.6em);
+  }
 }
 .about__cow {
+  @include min320-max767 {
+    display: flex;
+    justify-content: center;
+  }
+  @include min768 {
+    width: 100%;
+  }
 }
 
 .about__description {
   @include font(12px, 500, 1.62, null);
   color: var(--main-text-color);
-  margin: 46px 35px 0 35px;
+
+  @include min768 {
+    @include font(14px, 500, 1.76, null);
+  }
+  @include min1200 {
+    @include font(16px, 500, 1.76, null);
+  }
 }
 .about__text,
 .about__text--secondary {
   @include font(12px, 500, 1.62, null);
   color: var(--secondary-text-color);
-  margin: 0px 35px;
-  margin-top: 46px;
+  @include min768 {
+    @include font(14px, 500, 1.76, null);
+  }
+  @include min1200 {
+    @include font(16px, 500, 1.94, null);
+  }
+
+  margin-top: 35px;
   &--secondary {
-    margin: 20px 35px 0 35px;
+    margin-top: 20px;
   }
 }
 .about__button {
-  margin: 46px;
+  @include flex(flex, center, center);
+  margin-top: 46px;
   background: var(--main-white-color);
   border-radius: 22px;
-  padding: 15px 37px;
+  // padding: 15px 37px;
+  padding: 19px 37px 17px 37px;
   &:hover,
   &:focus {
     background-color: var(--light-btn-hover);
+  }
+  @include min768 {
+    margin-top: 62px;
+  }
+  @include min1200 {
+    margin-top: 45px;
   }
 }
 .about__button--text {
-  @include font(16px, 700, 1.31, null);
-  //   display: flex;npm
-  //   align-items: center;
-  //   text-align: center;
+  @include font(14px, 700, 1.28, null);
+
+  @include min768 {
+    @include font(16px, 700, 1.31, null);
+  }
+  margin-right: 13px;
 
   color: var(--accent-color);
   cursor: pointer;
-}
-// .about__background {
-//   //   background-position: center;
-// }
-// --------------------------- Белая кнопка
-.first-btn {
-  @include flex(flex, center, center);
-  color: var(--accent-color);
-  border-radius: 22px;
-  background-color: var(--main-white-color);
-
-  &:hover,
-  &:focus {
-    background-color: var(--light-btn-hover);
-  }
-}
-
-.first-btn__start {
-  @include font(16px, 700, 1.31, null);
-  padding: 19px 37px 17px 37px;
-}
-
-.first-btn__finish {
-  fill: var(--accent-color);
-  margin-left: 12px;
-}
-
-// --------------------------- Малиновая кнопка
-.second-btn {
-  @include flex(flex, center, center);
-  color: var(--main-white-color);
-  border-radius: 22px;
-  background-color: var(--accent-color);
-
-  &:hover,
-  &:focus {
-    background-color: var(--dark-btn-hover);
-  }
-}
-
-.second-btn__start {
-  @include font(16px, 700, 1.31, null);
-  padding: 19px 36px 17px 36px;
-}
-
-.second-btn__finish {
-  fill: var(--main-white-color);
-  margin-left: 12px;
 }
