@@ -1,14 +1,10 @@
 // --------------------------- Белая кнопка
 .first-btn {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-
-  color: var(--accent-color);
-  border-radius: 22px;
-  background-color: var(--main-white-color);
-
+ @include flex {
+ color: var(--accent-color);
+ border-radius: 22px;
+ background-color: var(--main-white-color);
+ }
   &:hover,
   &:focus {
     background-color: var(--light-btn-hover);
@@ -16,12 +12,9 @@
 }
 
 .first-btn__start {
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(21 / 16);
+  @include font {
   padding: 19px 37px 17px 37px;
-
+  }
 }
 
 .first-btn__finish {
@@ -31,14 +24,11 @@ fill: var(--accent-color);
 
 // --------------------------- Малиновая кнопка 
 .second-btn {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-
-  color: var(--main-white-color);
-  border-radius: 22px;
-  background-color: var(--loc-hov-btn);
+  @include flex {
+    color: var(--main-white-color);
+    border-radius: 22px;
+    background-color: var(--accent-color);
+  }
 
   &:hover,
   &:focus {
@@ -47,11 +37,9 @@ fill: var(--accent-color);
 }
 
 .second-btn__start {
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(21 / 16);
-  padding: 19px 36px 17px 36px;
+@include font {
+padding: 19px 36px 17px 36px;
+}
 }
 
 .second-btn__finish {
