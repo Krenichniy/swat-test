@@ -20,11 +20,16 @@
 
     color: var(--main-white-color);
 
+    &::before,
     &::after {
-        content: "";
-        width: 24px;
-        height: 24px;
-        background-size: contain;
+      content: '';
+      display: flex;
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before {
+        background-image: url(../images/products-icecoffee-desktop@1x.png);
     }
 
     &::after {
