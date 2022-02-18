@@ -7,6 +7,17 @@
 .advantages {
   background: #fff5f6;
   padding-right: 70px;
+  padding-top: 39px;
+  padding-bottom: 97px;
+
+  @include min768 {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+  @include min1280 {
+    padding-top: 39px;
+    padding-bottom: 139px;
+  }
 
   &__list {
     // display: flex;
@@ -116,7 +127,6 @@
 
   &__text {
     font-family: DM Sans;
-    font-weight: bold;
     @include font(12px, bold, 170%, inherit);
 
     color: var(--main-text-color);
