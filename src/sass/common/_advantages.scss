@@ -74,7 +74,7 @@
       '3': 44px,
     );
 
-    @for $i from 1 to 4 {
+    @for $i from 1 to length($adv-img) + 1 {
       &:nth-child(#{$i}) > .advantages__title::before {
         $bg: map-get($adv-img, '#{$i}');
         background-image: #{'url("'}#{$bg}#{'1x.png")'};
