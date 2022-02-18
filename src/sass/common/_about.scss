@@ -15,11 +15,27 @@
 }
 
 .about__container {
-  position: relative;
   z-index: 1;
+}
+.about__wrapper-content {
+  @include min768 {
+    @include flex(flex, center, center);
+  }
+}
+.about__cow-wrapper {
+  @include min768 {
+    width: 340px;
+    height: 340px;
+  }
 }
 // .container {
 // }
+.about__text-wrapper {
+  @include min768 {
+    max-width: 340px;
+    margin-right: 17px;
+  }
+}
 .about__pre-title {
   @include font(18px, 400, 1.17, null);
   color: var(--sub-title-color);
@@ -31,8 +47,8 @@
   text-align: center;
   margin-top: 15px;
 }
-// .about__cow {
-// }
+.about__cow {
+}
 
 .about__description {
   @include font(12px, 500, 1.62, null);
