@@ -37,9 +37,9 @@ fill: var(--accent-color);
 }
 
 .second-btn__start {
-@include font {
-padding: 19px 36px 17px 36px;
-}
+  @include font {
+    padding: 19px 36px 17px 36px;
+  }
 }
 
 .second-btn__finish {
