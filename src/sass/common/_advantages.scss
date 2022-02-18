@@ -1,0 +1,139 @@
+@mixin adv-bg-2x {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+.advantages {
+  background: #fff5f6;
+  padding-top: (39px / 2);
+  padding-bottom: (97px / 2);
+
+  @include min768 {
+    padding-top: (66px / 2);
+    padding-bottom: (140px / 2);
+  }
+  @include min1280 {
+    padding-top: (39px / 2);
+    padding-bottom: (139px / 2);
+  }
+
+  &__list {
+    max-width: 230px;
+
+    @include min768 {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+    }
+    @include min1280 {
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 156px;
+
+    & + & {
+      margin-top: 38px;
+    }
+
+    @include min768 {
+      width: 180px;
+      height: 226px;
+
+      & + & {
+        margin-top: 0;
+        margin-left: 60px;
+      }
+    }
+
+    @include min1280 {
+      width: 330px;
+      height: 222px;
+
+      & + & {
+        margin-left: 30px;
+      }
+    }
+
+    // <---------------------  adv-icons  --------------------->
+    $adv-img: (
+      '1': '../images/721@',
+      '2': '../images/16kg@',
+      '3': '../images/84@',
+    );
+
+    $adv-img-w: (
+      '1': 33px,
+      '2': 50px,
+      '3': 44px,
+    );
+
+    @for $i from 1 to length($adv-img) + 1 {
+      &:nth-child(#{$i}) > .advantages__title::before {
+        $bg: map-get($adv-img, '#{$i}');
+        background-image: #{'url("'}#{$bg}#{'1x.png")'};
+        width: map-get($adv-img-w, '#{$i}');
+
+        @include adv-bg-2x {
+          background-image: #{'url("'}#{$bg}#{'2x.png")'};
+        }
+      }
+    }
+    // <------------------- end adv-icons -------------------->
+  }
+  &__title {
+    font-family: Titan One;
+    @include font(36px, normal, calc(41 / 36), inherit);
+    text-transform: uppercase;
+
+    color: #d41443;
+
+    margin-bottom: 16px;
+
+    @include min768 {
+      font-size: 48px;
+      line-height: 55px;
+    }
+    @include min1280 {
+      font-size: 58px;
+      line-height: 66px;
+    }
+
+    &::before {
+      content: '';
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 33px;
+      height: 50px;
+      display: block;
+
+      margin-bottom: 16px;
+
+      @include min768 {
+        margin-bottom: 36px;
+      }
+      @include min1280 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__text {
+    font-family: DM Sans;
+    @include font(12px, bold, 170%, inherit);
+
+    color: var(--main-text-color);
+
+    @include min768 {
+      font-size: 14px;
+    }
+    @include min1280 {
+      font-size: 16px;
+    }
+  }
+}
