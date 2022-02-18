@@ -6,17 +6,16 @@
 
 .advantages {
   background: #fff5f6;
-  padding-right: 70px;
-  padding-top: 39px;
-  padding-bottom: 97px;
+  padding-top: (39px / 2);
+  padding-bottom: (97px / 2);
 
   @include min768 {
-    padding-top: 66px;
-    padding-bottom: 140px;
+    padding-top: (66px / 2);
+    padding-bottom: (140px / 2);
   }
   @include min1280 {
-    padding-top: 39px;
-    padding-bottom: 139px;
+    padding-top: (39px / 2);
+    padding-bottom: (139px / 2);
   }
 
   &__list {
