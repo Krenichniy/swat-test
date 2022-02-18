@@ -12,6 +12,15 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(../images/milk-bg-mob@2x.png);
   }
+  @include min768 {
+    background-image: url(../images/milk-bg-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/milk-bg-desktop@2x.png);
+    }
+  }
+  @include min1200 {
+    background-size: cover;
+  }
 }
 
 .about__container {
@@ -26,6 +35,9 @@
   @include min768 {
     width: 340px;
     height: 340px;
+  }
+  @include min1200 {
+    width: 516px;
   }
 }
 // .container {
