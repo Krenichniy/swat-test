@@ -4,7 +4,9 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 (()=>{const e=document.querySelector(".js-menu-container"),t=document.querySelector(".js-open-menu"),o=document.querySelector(".js-close-menu"),n=()=>{const o="true"===t.getAttribute("aria-expanded")||!1;t.setAttribute("aria-expanded",!o),e.classList.toggle("is-open"),bodyScrollLock[o?"enableBodyScroll":"disableBodyScroll"](document.body)};t.addEventListener("click",n),o.addEventListener("click",n),window.matchMedia("(min-width: 768px)").addEventListener("change",o=>{o.matches&&(e.classList.remove("is-open"),t.setAttribute("aria-expanded",!1),bodyScrollLock.enableBodyScroll(document.body))})})();
 },{}],"RSqK":[function(require,module,exports) {
 (()=>{const e={openModalBtn:document.querySelector("[data-modal-open]"),closeModalBtn:document.querySelector("[data-modal-close]"),modal:document.querySelector("[data-modal]")};function o(){e.modal.classList.toggle("is-hidden")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o)})();
+},{}],"vKoR":[function(require,module,exports) {
+{let e=["menu-modal","menu-buy-modal","header-products-modal","header-how-modal","header-milk-modal","product-1-modal","product-2-modal","product-3-modal","how-read-more-modal","contacts-location-modal","contacts-franchise-modal"],o=[],l=[];e.forEach(e=>{o.push(e+"-open"),l.push(e+"-close")});for(let t=0;t<o.length;t++){let c=document.querySelector("["+o[t]+"]");if(!c)continue;let d=document.querySelector("["+l[t]+"]");if(!d){console.log("Уважаемый разработчик, вы добавили кнопку открытия '"+e[t]+"', но не добавили кнопку закрытия модалки");continue}let n=document.querySelector("["+e[t]+"]");if(!d){console.log("Уважаемый разработчик, вы добавили кнопку открытия и закрытия '"+e[t]+"', но не добавили модалку");continue}let a=function(){n.classList.toggle("modal-is-hidden")};c.addEventListener("click",a),d.addEventListener("click",a)}}
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("./js/mobile-menu"),require("./js/modal");
-},{"./sass/main.scss":"clu1","./js/mobile-menu":"sByI","./js/modal":"RSqK"}]},{},["Focm"], null)
-//# sourceMappingURL=/swat-test/src.caece485.js.map
+"use strict";require("./sass/main.scss"),require("./js/mobile-menu"),require("./js/modal"),require("./js/buttons");
+},{"./sass/main.scss":"clu1","./js/mobile-menu":"sByI","./js/modal":"RSqK","./js/buttons":"vKoR"}]},{},["Focm"], null)
+//# sourceMappingURL=/swat-test/src.6a57139f.js.map
