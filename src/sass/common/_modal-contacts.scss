@@ -1,4 +1,5 @@
-.contacts-location-modal {
+.location-modal,
+.franchise-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +14,7 @@
 //    pointer-events: none;
 // }
 
-.contacts-location-map {
+.location-map {
   position: absolute;
   display: block;
   width: 90%;
@@ -40,7 +41,8 @@
     width: 1000px;
   }
 }
-.contacts-location__form {
+.location-form,
+.franchise-form {
   margin: 0 auto;
   padding-left: 5px;
   padding-right: 5px;
@@ -51,7 +53,8 @@
     padding: 5px 5px;
   }
 }
-.contacts-location-modal-close {
+.location-modal__close-btn,
+.franchise-form__close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -73,7 +76,8 @@
   }
 }
 
-.contacts-location__title {
+.contacts-location__title,
+.franchise-form__title {
   display: block;
   margin-bottom: 10px;
   font-family: Titan One;
