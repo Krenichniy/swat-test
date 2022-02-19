@@ -11,10 +11,16 @@
 }
 
 .contacts {
-  background: linear-gradient(180deg, #fff 11%, #fff5f6 0);
+  padding-top: 86px;
+  background: linear-gradient(180deg, #fff 170px, #fff5f6 0);
+  @include min768 {
+    padding-top: 119px;
+    background: linear-gradient(180deg, #fff 196px, #fff5f6 0);
+  }
   @include min1280 {
     padding-top: 132px;
-    background: url(../images/contacts-bg-desktop@1x.png);
+    background: url(../images/contacts-bg-desktop@1x.png) no-repeat 50% 50%,
+      linear-gradient(180deg, #fff 233px, #fff5f6 0);
   }
 }
 
@@ -182,48 +188,82 @@
 // .contacts__mail {
 
 // }
-// --------------------------- Белая кнопка
-// .first-btn {
-//   @include flex(flex, center, center);
-//   color: var(--accent-color);
-//   border-radius: 22px;
-//   background-color: var(--main-white-color);
+.contacts__button-wrap {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  @include min768 {
+    flex-direction: row;
+  }
+  // }
+  // .contacts__btn {
+  //   //   width: 161px;
+  //   //   height: 44px;
+  //   &:not(:last-child) {
+  //     margin-bottom: 10px;
+  //     @include min768 {
+  //       margin-right: 15px;
+  //       margin-bottom: 0px;
+  //     }
+  //   }
+  // }
+  // .contacts__btn--white {
+  //   @include font(16px, 700, 1.31, null);
+  //   padding: 19px 37px 17px 37px;
+  // }
+  // .contacts__btn--red {
+  //   @include font(16px, 700, 1.31, null);
+  //   padding: 19px 36px 17px 36px;
+  // }
+  // // ----------------------------------
+  // .first-btn__finish {
+  //   fill: var(--accent-color);
+  //   margin-left: 12px;
+  // }
+  // .second-btn__finish {
+  //   fill: var(--main-white-color);
+  //   margin-left: 12px;
+  // }
+  // .second-btn {
+  //   @include flex(flex, center, center);
+  //   color: var(--main-white-color);
+  //   border-radius: 22px;
+  //   background-color: var(--accent-color);
 
-//   &:hover,
-//   &:focus {
-//     background-color: var(--light-btn-hover);
-//   }
-// }
+  //   &:hover,
+  //   &:focus {
+  //     background-color: var(--dark-btn-hover);
+  //   }
+  // }
+  // .first-btn {
+  //   @include flex(flex, center, center);
+  //   color: var(--accent-color);
+  //   border-radius: 22px;
+  //   background-color: var(--main-white-color);
 
-// .first-btn__start {
-//   @include font(16px, 700, 1.31, null);
-//   padding: 19px 37px 17px 37px;
-// }
+  //   &:hover,
+  //   &:focus {
+  //     background-color: var(--light-btn-hover);
+  //   }
+  //   .first-btn {
+  //     @include flex(flex, center, center);
+  //     width: 115px;
+  //     color: var(--accent-color);
+  //     border-radius: 22px;
+  //     background-color: var(--main-white-color);
 
-// .first-btn__finish {
-//   fill: var(--accent-color);
-//   margin-left: 12px;
-// }
+  //     &:hover,
+  //     &:focus {
+  //       background-color: var(--light-btn-hover);
+  //     }
+  //   }
 
-// // --------------------------- Малиновая кнопка
-// .second-btn {
-//   @include flex(flex, center, center);
-//   color: var(--main-white-color);
-//   border-radius: 22px;
-//   background-color: var(--accent-color);
+  //   .first-btn__start {
+  //     @include font(16px, 700, 1.31, null);
+  //     padding: 0px 17px;
+  //   }
 
-//   &:hover,
-//   &:focus {
-//     background-color: var(--dark-btn-hover);
-//   }
-// }
-
-// .second-btn__start {
-//   @include font(16px, 700, 1.31, null);
-//   padding: 19px 36px 17px 36px;
-// }
-
-// .second-btn__finish {
-//   fill: var(--main-white-color);
-//   margin-left: 12px;
-// }
+  //   .first-btn__finish {
+  //     fill: var(--accent-color);
+  //     margin-left: 12px;
+  //   }
+}
