@@ -2,15 +2,23 @@
 //     background:#FFF5F6;
     
 // }
+.container--footer {
+   
+    @include min768 {
+      @include flex(flex, space-beetwen, baseline);
+    }
+  }
 
 .footer__title  {
 color: #FEA5BB;
 font-family: Titan One;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
 text-transform: uppercase;
+@include font(18px,normal,1.17, null);
+// font-style: normal;
+// font-weight: normal;
+// font-size: 18px;
+// line-height: 21px;
+
 
 padding-top: 113px;
 padding-left: 22px;
