@@ -68,8 +68,9 @@ font-weight: bold;
 font-size: 16px;
 line-height: 30px;
 letter-spacing: 0.02em;
-   
+  
 }
+
 
 .footer__item--text 
 {
@@ -80,9 +81,16 @@ letter-spacing: 0.02em;
      color: #d41443;
 
 }
+.footer__list {
+    @include max767 {
+    text-align: right;
+}
+}
+
 .copyright
 {
     border-top: 1px solid #E1E1E1;
+    text-align: center;
 }
 .copyright__title,
 .copyright__text {
