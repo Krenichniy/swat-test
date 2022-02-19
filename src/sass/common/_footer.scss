@@ -58,8 +58,6 @@ padding-left: 22px;
     }
 }
 
-
-
 .footer__link--text,
 .footer__link--tel   {
 font-family: DM Sans;
@@ -89,7 +87,8 @@ letter-spacing: 0.02em;
      color: #d41443;
 
 }
-.footer-social__list {
+.footer-social__list,
+.copyright {
 
     @include max767 {
     text-align: right;
