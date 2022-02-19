@@ -3,7 +3,7 @@
     
 // }
 
-.footer__title{
+.footer__title  {
 color: #FEA5BB;
 font-family: Titan One;
 font-style: normal;
@@ -12,14 +12,14 @@ font-size: 18px;
 line-height: 21px;
 text-transform: uppercase;
 
-margin-top: 113px;
+padding-top: 113px;
 padding-left: 22px;
 @include min768-max1199 {
-    margin-top: 158px;
+    padding-top: 158px;
     padding-left: 36px;
 }
 @include min1200 {
-    margin-top: 165px;
+    padding-top: 165px;
     padding-left: 114px;
 }
 
@@ -80,7 +80,10 @@ letter-spacing: 0.02em;
      color: #d41443;
 
 }
-
+.copyright
+{
+    border-top: 1px solid #E1E1E1;
+}
 .copyright__title,
 .copyright__text {
 color: #907E82; 
