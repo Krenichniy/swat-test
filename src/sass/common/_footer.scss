@@ -13,11 +13,14 @@ line-height: 21px;
 text-transform: uppercase;
 
 margin-top: 113px;
+padding-left: 22px;
 @include min768-max1199 {
     margin-top: 158px;
+    padding-left: 36px;
 }
 @include min1200 {
     margin-top: 165px;
+    padding-left: 114px;
 }
 
 }
@@ -30,7 +33,17 @@ margin-top: 113px;
     line-height: 39px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-top: 63px;
+
+    margin-top: 17px;
+    padding-left: 20px;
+    @include min768-max1199 {
+    margin-top: 16px;
+    padding-left: 36px;
+}
+@include min1200 {
+    margin-top: 15px;
+    padding-left: 114px;
+}
 }
 
 
