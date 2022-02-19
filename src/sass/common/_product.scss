@@ -3,8 +3,14 @@
     font-family: Titan One;
     text-align: center;
     text-transform: uppercase;
-
     color: #FFA5BA;
+    
+    @include min768 {
+    @include font (26px, 400, 1.15, 0.04em);
+    }
+     @include min1280 {
+       @include font (30px, 400, 1.13, 0.04em);
+     }
 }
 
 .product-title {
@@ -17,11 +23,13 @@
     margin-bottom: 144px;
 
     @include min768 {
-       margin-bottom: 150px;
+    @include font (48px, 400, 1.15, 0.04em);
+    margin-bottom: 150px;
     }
 
     @include min1280 {
-        margin-bottom: 259px;
+    @include font (56px, 400, 1.14, 0.04em);
+    margin-bottom: 259px;
     }
 }
 
@@ -29,29 +37,29 @@
     @include min768 {
         display: flex;
     }
-
-    @include min1280 {
-        justify-content: center;
-    }
 }
 
 .product-container {
     max-width: 280px;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 152px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     @include min768 {
         max-width: 220px;
+        padding-left: 11px;
+        padding-right: 11px;
     }
 
     @include min1280 {
         max-width: 329px;
+        padding-left: 44px;
+        padding-right: 44px;
     }
 }
 
 .product-link {
+    position: relative;
     padding-bottom: 40px;
     max-width: 280px;
     margin-left: auto;
@@ -85,6 +93,7 @@
     }
 
     @include min1280 {
+        padding-bottom: 51px;
         &:not(:last-child) {
             margin-right: 20px;
         }
@@ -93,32 +102,153 @@
        &::before {
          content: '';
          position: absolute;
-         display: block;
+         top: -23%;
+         left: 50%;
+         right: 50%;
+         margin-bottom: 20px;
+         transform: translateX(-50%);
          width: 249px;
          height: 252px;
+
+        @include min768 {
+          top: -22.5%;
+          margin-bottom: 30px;
+        }
+
+
+         @include min1280 {
+             top: -26.5%;
+             margin-bottom: 38px;
+         }
        }
 
        &::before {
-         margin-top: -150px;
-         margin-bottom: 20px;
+         background-image: url(../images/products-icecream-mob@1x.png);
+         background-repeat: no-repeat;
+         background-size: cover;
+
+         @media (min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+           background-image: url(../images/products-icecream-mob@2x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+         }
+
+         @include min768 {
+           background-image: url(../images/products-icecream-tab@1x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+
+           @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+             background-image: url(../images/products-icecream-tab@2x.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+           }
+         }
+
+         @include min1280 {
+           background-image: url(../images/products-icecream-desktop@1x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+
+           @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+             background-image: url(../images/products-icecream-desktop@2x.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+           }
+         }
+       }
+
+       &:nth-child(2) {
+        &::before {
          background-image: url(../images/products-icecoffee-mob@1x.png);
          background-repeat: no-repeat;
+         background-size: cover;
+
+         @media (min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+           background-image: url(../images/products-icecoffee-mob@2x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+         }
+
+         @include min768 {
+           background-image: url(../images/products-icecoffee-tab@1x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+
+           @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+             background-image: url(../images/products-icecoffee-tab@2x.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+           }
+         }
+
+         @include min1280 {
+           background-image: url(../images/products-icecoffee-desktop@1x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+
+           @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+             background-image: url(../images/products-icecoffee-desktop@2x.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+           }
+         }
+        }
        }
 
        &:last-child {
-         &::before {
-           content: '';
-           display: block;
-           width: 249px;
-           height: 252px;
+       &::before {
+         background-image: url(../images/products-iceshakes-mob@1x.png);
+         background-repeat: no-repeat;
+         background-size: cover;
+
+         @media (min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+           background-image: url(../images/products-iceshakes-mob@2x.png);
+           background-repeat: no-repeat;
+           background-size: cover;
          }
 
-         &::before {
-           margin-top: -150px;
-           margin-bottom: 20px;
-           background-image: url(../images/products-icecream-mob@1x.png);
-           background-repeat: no-repeat;
+         @include min768  {
+             background-image: url(../images/products-iceshakes-tab@1x.png);
+             background-repeat: no-repeat;
+             background-size: cover;
+
+             @media (min-device-pixel-ratio: 2),
+             (min-resolution: 192dpi),
+             (min-resolution: 2dppx) {
+               background-image: url(../images/products-iceshakes-tab@2x.png);
+               background-repeat: no-repeat;
+               background-size: cover;
+             }
          }
+          @include min1280{
+            background-image: url(../images/products-iceshakes-desktop@1x.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+              background-image: url(../images/products-iceshakes-desktop@2x.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+          }
+       }
        }
 }
 
@@ -127,17 +257,17 @@
     font-family: Titan One;
     text-align: center;
     text-transform: uppercase;
-    // margin-top: 161px;
+    padding-top: 161px;
 
     color: var(--main-white-color);
 
-    // @include min768 {
-    //     margin-top: 163px;
-    // }
+    @include min768 {
+        padding-top: 163px;
+    }
 
-    // @include min1280 {
-    //     margin-top: 152px;
-    // }
+    @include min1280 {
+        padding-top: 152px;
+    }
     
     &::after {
        content: '';
@@ -165,19 +295,28 @@
     margin-left: auto;
     margin-right: auto;
 
-    &::after {
-        content: '';
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin: 30px;
-        margin-left: auto;
-        margin-right: auto;
+    @include min768 {
+        @include font (14px, 700, 176%, 0.04em);
+        max-width: 298px;
     }
 
-    &::after {
-        background-image: url(../images/btn-arrow.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+    @include min1280 {
+        max-width: 241px;
+    }
+}
+
+.product-info-btn {
+    background: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    @include min768 {
+        margin-top: 40px;
+    }
+
+    @include min1280 {
+        margin-top: 62px;
     }
 }
