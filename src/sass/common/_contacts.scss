@@ -182,12 +182,6 @@
     @include font(16px, 500, 183%, null);
   }
 }
-// .contacts__tel {
-
-// }
-// .contacts__mail {
-
-// }
 .contacts__button-wrap {
   @include flex(flex, center, center);
   flex-direction: column;
