@@ -2,6 +2,7 @@
     background: var(--sub-title-color);
     
 }
+
 .footer__title{
 color: var(--sub-title-color);
 font-family: Titan One;
@@ -27,4 +28,22 @@ margin-top: 63px;
 
 .footer__icon {
     fill:#FEA5BB;
+}
+
+.footer__link--text,
+.footer__link--tel   {
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 22px;
+}
+
+.footer__link--text 
+{
+    color: #000000;
+}
+.footer__link--tel
+{
+    color: var(--d41443);
 }
