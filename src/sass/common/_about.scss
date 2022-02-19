@@ -13,9 +13,13 @@
     background-image: url(../images/milk-bg-mob@2x.png);
   }
   @include min768 {
+    padding: 130px 0 33px 0;
     background-image: url(../images/milk-bg-desktop@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/milk-bg-desktop@2x.png);
+    }
+    @include min1280 {
+      padding: 125px 0 73px 0;
     }
   }
 }
