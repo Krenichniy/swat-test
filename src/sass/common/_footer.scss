@@ -47,3 +47,25 @@ line-height: 22px;
 {
     color: var(--d41443);
 }
+.copyright__title{
+color: #907E82; 
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 152%;
+}
+
+.copyright__text {
+    font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 186%;
+/* or 22px */
+
+text-align: right;
+
+color: #000000;
+
+}
