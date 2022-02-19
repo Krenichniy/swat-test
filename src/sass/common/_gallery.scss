@@ -111,9 +111,8 @@
 .gallery-img {
   border-radius: 6px;
   position: relative;
-  transform: scale;
-
-  transition: box-shadow 250ms linear, border 750ms linear;
+  transform: scale(1);
+  transition: box-shadow 400ms linear, border 650ms linear, transform 500ms;
   overflow: hidden;
   box-sizing: border-box;
   @include min480 {
@@ -127,8 +126,7 @@
   }
   &:hover {
     transform: scale(1.7);
-    transition: 700ms;
-    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+    box-shadow: 1px 4px 6px 0px #000000, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
     z-index: 2;
     border: 0.5px solid var(--accent-color);
   }
