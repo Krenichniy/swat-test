@@ -3,21 +3,21 @@
   background: -moz-linear-gradient(180deg, rgb(255, 245, 246) 50%, rgb(255, 255, 255) 50%);
   background: linear-gradient(180deg, rgb(255, 245, 246) 50%, rgb(255, 255, 255) 50%);
   max-width: 768px;
+
+  padding: 50px 0 40px 0;
   @include min768 {
-    max-width: 1200px;
+    max-width: 1280px;
+    padding: 70px 0 60px 0;
   }
   @include min1280 {
     max-width: 100%;
   }
-  padding: 40px 0;
 }
 
 .gallery-container {
   display: flex;
   margin: 0 auto;
   max-width: 288px;
-  transform: background-color;
-  transition: 750ms;
   @include min480 {
     max-width: 400px;
   }
@@ -112,6 +112,7 @@
   border-radius: 6px;
   position: relative;
   transform: scale;
+
   transition: box-shadow 250ms linear, border 750ms linear;
   overflow: hidden;
   box-sizing: border-box;
@@ -126,15 +127,10 @@
   }
   &:hover {
     transform: scale(1.7);
-    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
     transition: 700ms;
-    z-index: 3;
+    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+    z-index: 2;
     border: 0.5px solid var(--accent-color);
-    .gallery-img-container {
-      z-index: 2;
-      background-color: rgb(0, 0, 0);
-      max-width: 100%;
-    }
   }
   &-2,
   &-4,
