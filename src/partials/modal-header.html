@@ -1,0 +1,60 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal__close" data-modal-close>
+            <img class="modal__icon" src="./images/hero-icecream-mob@1x.png" alt="Ice cream">
+        </button>
+        <p class="modal__title">Ice Cream Order Form</p>
+        <form action="#" class="form">
+            <div class="form-field form__form-field">
+                <label for="user-name" class="form__label">Your name</label>
+                <div class="form__input-wrap">
+                    <input type="text" name="user-name" class="form__input" id="user-name" />
+                    <svg class="form__icon" width="18" height="18">
+                        <use href="./images/mob-menu-icons.svg#icon-person"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="form-field form__form-field">
+                <label for="user-tel" class="form__label">Your phone</label>
+                <div class="form__input-wrap">
+                    <input type="tel" name="tel" class="form__input" id="user-tel" />
+                    <svg class="form__icon" width="18" height="18">
+                        <use href="./images/mob-menu-icons.svg#icon-phone"></use>
+                    </svg>
+                </div>
+            </div>
+            <div role="group" class="modal-order">
+                <input class="checkbox-order" type="checkbox" name="order" value="ice cream" id="ice cream" checked>
+                <label class="order-label" for="ice cream"">
+                            <img src="./images/products-icecream-mob@1x.png" alt="ice cream"
+                    class="checkbox-img">
+                    <span class="buy-label">ICE CREAM</span>
+                </label>
+
+                <input class="checkbox-order" type="checkbox" name="order" value="ice coffee" id="ice coffee">
+                <label class="order-label" for="ice coffee">
+                    <img src="./images/products-icecoffee-mob@1x.png" alt="ice coffee" class="checkbox-img">
+                    <span class="buy-label">ICE COFFEE</span>
+                </label>
+
+                <input class="checkbox-order" type="checkbox" name="order" value="milkshakes" id="milkshakes">
+                <label class="order-label" for="milkshakes">
+                    <img src="./images/products-iceshakes-mob@1x.png" alt="milkshakes" class="checkbox-img">
+                    <span class="buy-label">MILKSHAKES</span>
+                </label>
+
+            </div>
+            <div class="form-check form__form-check">
+                <input type="checkbox" name="policy" id="policy" class="form-check__policy visually-hidden" />
+                <label for="policy" class="form-check__text">
+                    <span class="form-check__icon"><svg width="16" height="15">
+                            <use href="./images/mob-menu-icons.svg#icon-check"></use>
+                        </svg></span>
+                    I agree to taste an ice cream with a great pleasure</label>
+            </div>
+            <div class="modal__button-wrap">
+                <button type="submit" class="modal__submit btn">Buy now</button>
+            </div>
+        </form>
+    </div>
+</div>
