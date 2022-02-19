@@ -1,1 +1,9 @@
-<svg width="26" height="6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="3" r="3" fill="#fff"/><circle cx="3" cy="3" r="3" fill="#fff"/><circle cx="23" cy="3" r="3" fill="#fff"/></svg>
+<svg width="26" height="6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="3" r="3" fill="#fff"/><circle cx="3" cy="3" r="3" fill="#fff"/><circle cx="23" cy="3" r="3" fill="#fff"/>
+<defs>
+<symbol id="icon-dot" viewBox="0 0 139 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M85.333 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M138.667 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+</symbol>
+</defs>
+</svg>
