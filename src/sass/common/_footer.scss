@@ -97,18 +97,17 @@ letter-spacing: 0.02em;
 }
 
 .copyright
-{
+{   display: block;
     border-top: 1px solid #E1E1E1;
     text-align: center;
 }
-.copyright__title,
-.copyright__text {
+.copyright__title {
 color: #907E82; 
 font-family: DM Sans;
 font-style: normal;
 font-weight: bold;
 font-size: 14px;
-line-height: 26px;
+line-height: calc(21 / 14);
 text-align: center;
 }
 
