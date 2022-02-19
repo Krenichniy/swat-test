@@ -27,7 +27,8 @@ margin-top: 63px;
 
 
 .footer__icon {
-    fill:#FEA5BB;
+    fill: #ffffff ;
+    background-color:#FEA5BB ;
 }
 
 .footer__link--text,
@@ -46,14 +47,16 @@ font-weight: bold;
 font-size: 16px;
 line-height: 30px;
 letter-spacing: 0.02em;
-    &--text 
-    {
-        color: #000000;
-    }
-    &--tel
-    {color: #d41443;;
+   
+}
 
-    }
+.footer__item--text 
+{
+    color: #000000;
+}
+
+.footer__link--tel {
+     color: #d41443;
 
 }
 
