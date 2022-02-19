@@ -1,34 +1,34 @@
 .product-pre-title {
-    @include font (18px, 400, 1.17, 0.04em);
+    @include font (18px, 400, 1.17, null);
     font-family: Titan One;
     text-align: center;
     text-transform: uppercase;
-    color: #FFA5BA;
+    color: var(--sub-title-color);
     
     @include min768 {
-    @include font (26px, 400, 1.15, 0.04em);
+    @include font (26px, 400, 1.15, null);
     }
      @include min1280 {
-       @include font (30px, 400, 1.13, 0.04em);
+       @include font (30px, 400, 1.13, null);
      }
 }
 
 .product-title {
-    @include font (34px, 400, 1.15, 0.04em);
+    @include font (34px, 400, 1.15, null);
     font-family: Titan One;
     text-align: center;
     text-transform: uppercase;
-    color: #D41443;
+    color: var(--accent-color);
 
     margin-bottom: 144px;
 
     @include min768 {
-    @include font (48px, 400, 1.15, 0.04em);
+    @include font (48px, 400, 1.15, null);
     margin-bottom: 150px;
     }
 
     @include min1280 {
-    @include font (56px, 400, 1.14, 0.04em);
+    @include font (56px, 400, 1.14, null);
     margin-bottom: 259px;
     }
 }
@@ -85,8 +85,6 @@
         }
     }
 
-   
-
     @include min1280 {
         &:not(:last-child) {
           margin-right: 29px;
@@ -110,7 +108,6 @@
           top: -20.5%;
           margin-bottom: 30px;
         }
-
 
          @include min1280 {
              width: 335px;
@@ -251,7 +248,7 @@
 }
 
 .product-container__title {
-    @include font (20px, 400, 1.15, 0.04em);
+    @include font (20px, 400, 1.15, null);
     font-family: Titan One;
     text-align: center;
     text-transform: uppercase;
