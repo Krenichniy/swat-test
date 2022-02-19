@@ -57,9 +57,7 @@ padding-left: 22px;
         background-color: #d41443;
     }
 }
-.footer__link--icon {
-    background-color: #d41443;
-}
+
 
 
 .footer__link--text,
@@ -91,7 +89,7 @@ letter-spacing: 0.02em;
      color: #d41443;
 
 }
-.footer__list {
+.footer-social__list {
 
     @include max767 {
     text-align: right;
