@@ -1,0 +1,93 @@
+.header {
+  position: absolute;
+  z-index: 3;
+  top: 6px;
+  width: 100%;
+  background-color: transparent;
+  @include min768 {
+    top: 37px;
+  }
+}
+
+.header-container {
+  @include flex(flex, space-between, center);
+  @include min1280 {
+    position: relative;
+    height: 50px;
+  }
+}
+
+.logo {
+  @include min1280 {
+    position: absolute;
+    top: 0;
+    left: -39px;
+  }
+}
+
+.header__nav {
+  margin-left: 240px;
+  @include max1279 {
+    display: none;
+  }
+}
+
+.header__link-list {
+  @include flex(flex, start, center);
+}
+
+.header__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.header__link {
+  display: block;
+  padding: 10px 0 10px 0;
+  @include font(16px, 700, (21 / 16), null);
+  color: var(--main-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transform: scale(1.1);
+  }
+}
+
+.current-link {
+  color: var(--accent-color);
+}
+
+.header__btn-container {
+  @include flex(flex, center, center);
+}
+
+.mob-menu-btn {
+  @include flex(flex, center, center);
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  @include min768 {
+    margin-right: 30px;
+  }
+  @include min1280 {
+    display: none;
+  }
+}
+
+.buy-btn {
+  font-family: 'DM Sans', sans-serif;
+  width: 160px;
+  height: 44px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include max767 {
+    display: none;
+  }
+  & .first-btn__start {
+    padding: 0;
+  }
+  & > img {
+    width: 6px;
+    height: 10px;
+  }
+}
