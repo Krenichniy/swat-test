@@ -194,46 +194,49 @@
   @include min768 {
     flex-direction: row;
   }
-  .second-btn {
-    @include flex(flex, center, center);
-    color: var(--main-white-color);
-    border-radius: 22px;
-    background-color: var(--accent-color);
-
-    &:hover,
-    &:focus {
-      background-color: var(--dark-btn-hover);
-    }
+}
+.contacts__button--red {
+  @include flex(flex, center, center);
+  color: var(--main-white-color);
+  height: 44px;
+  padding: 0 17px;
+  margin-bottom: 8px;
+  border-radius: 22px;
+  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--dark-btn-hover);
   }
-
-  .second-btn__start {
-    @include font(16px, 700, 1.31, null);
-    padding: 19px 36px 17px 36px;
+  @include min768 {
+    padding: 0 35px 0 30px;
+    margin-bottom: 0px;
+    margin-right: 15px;
   }
+}
 
-  .second-btn__finish {
-    fill: var(--main-white-color);
-    margin-left: 12px;
+.contacts__button-text--red {
+  @include font(16px, 700, 1.31, null);
+  margin-right: 8px;
+}
+.contacts__button--wight {
+  @include flex(flex, center, center);
+  color: var(--accent-color);
+  height: 44px;
+  padding: 0 32px;
+  border-radius: 22px;
+  background-color: var(--main-white-color);
+  &:hover,
+  &:focus {
+    background-color: var(--light-btn-hover);
   }
-  .first-btn {
-    @include flex(flex, center, center);
-    color: var(--accent-color);
-    border-radius: 22px;
-    background-color: var(--main-white-color);
-
-    &:hover,
-    &:focus {
-      background-color: var(--light-btn-hover);
-    }
+  @include min768 {
+    padding: 0 38px;
   }
-
-  .first-btn__start {
-    @include font(16px, 700, 1.31, null);
-    padding: 19px 37px 17px 37px;
+  @include min768 {
+    padding: 0 40px;
   }
-
-  .first-btn__finish {
-    fill: var(--accent-color);
-    margin-left: 12px;
-  }
+}
+.contacts__button-text--wight {
+  @include font(16px, 700, 1.31, null);
+  margin-right: 13px;
 }
