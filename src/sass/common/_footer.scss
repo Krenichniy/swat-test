@@ -39,29 +39,35 @@ font-size: 12px;
 line-height: 22px;
 }
 
-.footer__link--text 
-{
-    color: #000000;
+.footer__link {
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 30px;
+letter-spacing: 0.02em;
+    &--text 
+    {
+        color: #000000;
+    }
+    &--tel
+    {color: var(--accent-color);
+
+    }
+
 }
-.footer__link--tel
-{
-    color: var(--d41443);
-}
-.copyright__title{
+
+
+
+
+
+.copyright__title,
+.copyright__text {
 color: #907E82; 
 font-family: DM Sans;
 font-style: normal;
 font-weight: bold;
 font-size: 14px;
-line-height: 152%;
+line-height: 26px;
 }
 
-.copyright__text {
-    font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 186%;
-color: #000000;
-
-}
