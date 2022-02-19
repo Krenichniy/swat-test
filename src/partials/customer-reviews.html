@@ -1,58 +1,83 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
 <div class="container">
-    <div class="secnion reviews-section">
-        <h2 class="visually-hidden">Customer reviews</h2>
-        <div class="review-card">
-            <picture >
-                <source srcset="
-                    ./images/slider-photo-1@1x.png 1x,
-                    ./images/slider-photo-1@2x.png 2x" >
-                <img src="./images/slider-photo-1@1x.png" alt="happy client 1" width="85" height="85" class="review-card__img"/>
-            </picture>
-            <div class="review-card-wrap">
-                <p class="review-card__text">
-                The variety of flavors they have is amazing, I just stuck on their website and Facebook. You can find
-                everything in their assortment. And I'm drooling, I want to try everything at once.
-                </p>
-            </div>
-            <div class="review-local-wrap">
-                <p class="review-local">Emily, Los Angeles</p>
-            </div>
+    <div class="swiper mySwiper">
+        <div class="section reviews-section swiper-wrapper">
+            <h2 class="visually-hidden">Customer reviews</h2>
+                <div class="review-card swiper-slide">
+                    <picture >
+                        <source srcset="
+                                ./images/slider-photo-1@1x.png 1x,
+                                ./images/slider-photo-1@2x.png 2x" >
+                        <img src="./images/slider-photo-1@1x.png" alt="happy client 1" width="85" height="85" class="review-card__img"/>
+                    </picture>
+                        <div class="review-card-wrap">
+                            <p class="review-card__text">
+                            The variety of flavors they have is amazing, I just stuck on their website and Facebook. You can find
+                            everything in their assortment. And I'm drooling, I want to try everything at once.
+                            </p>
+                        </div>
+                        <div class="review-local-wrap">
+                            <p class="review-local">Emily, Los Angeles</p>
+                        </div>
+                </div>
+                <div class="review-card swiper-slide">
+                    <picture>
+                        <source srcset="
+                                            ./images/slider-photo-2@1x.png 1x,
+                                            ./images/slider-photo-2@2x.png 2x">
+                        <img src="./images/slider-photo-2@1x.png" alt="happy client 1" width="85" height="85" class="review-card__img" />
+                    </picture>
+                        <div class="review-card-wrap">
+                            <p class="review-card__text">
+                                What to choose cake or ice cream? I will choose the latter. But only if it's IceCream! The taste is just
+                                amazing. Soft,
+                                melting, creamy. The main thing is cream and milk.
+                            </p>
+                        </div>
+                        <div class="review-local-wrap">
+                            <p class="review-local">Heather, New York</p>
+                        </div>
+                </div>
+                <div class="review-card swiper-slide">
+                    <picture class="review-card__img">
+                        <source srcset="
+                                            ./images/slider-photo-3@1x.png 1x,
+                                            ./images/slider-photo-3@2x.png 2x">
+                        <img src="./images/slider-photo-3@1x.png" alt="happy client 1" width="85" height="85" class="review-card__img" />
+                    </picture>
+                        <div class="review-card-wrap">
+                            <p class="review-card__text">
+                                Strawberries, chocolate, all kinds of cookies, m&ms and other sweets. Everything can be found in one
+                                waffle cup.
+                                IceCream is my new sweet love. Ice cream with natural ingredients and amazing taste.
+                            </p>
+                        </div>
+                        <div class="review-local-wrap">
+                            <p class="review-local">Lily, Miami</p>
+                        </div>
+                </div>
         </div>
-        <div class="review-card">
-            <picture>
-                <source srcset="
-                                ./images/slider-photo-2@1x.png 1x,
-                                ./images/slider-photo-2@2x.png 2x">
-                <img src="./images/slider-photo-2@1x.png" alt="happy client 1" width="85" height="85" class="review-card__img" />
-            </picture>
-            <div class="review-card-wrap">
-                <p class="review-card__text">
-                    What to choose cake or ice cream? I will choose the latter. But only if it's IceCream! The taste is just
-                    amazing. Soft,
-                    melting, creamy. The main thing is cream and milk.
-                </p>
-            </div>
-            <div class="review-local-wrap">
-                <p class="review-local">Heather, New York</p>
-            </div>
-        </div>
-        <div class="review-card">
-            <picture class="review-card__img">
-                <source srcset="
-                                ./images/slider-photo-3@1x.png 1x,
-                                ./images/slider-photo-3@2x.png 2x">
-                <img src="./images/slider-photo-3@1x.png" alt="happy client 1" width="85" height="85" class="review-card__img" />
-            </picture>
-            <div class="review-card-wrap">
-                <p class="review-card__text">
-                    Strawberries, chocolate, all kinds of cookies, m&ms and other sweets. Everything can be found in one
-                    waffle cup.
-                    IceCream is my new sweet love. Ice cream with natural ingredients and amazing taste.
-                </p>
-            </div>
-            <div class="review-local-wrap">
-                <p class="review-local">Lily, Miami</p>
-            </div>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>

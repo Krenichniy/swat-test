@@ -1,27 +1,43 @@
-// .reviews-section{
-
-// }
-
-// .review-card{
-
-// }
+.reviews-section{
+margin-top: 30px;
+margin-bottom: 86px;
+    @include min768{
+        margin-bottom: 20px;
+    }
+    @include min1200{
+        margin-bottom: 15px;
+    }
+}
 
 .review-card-wrap{
 position: relative;
 width: 100vw;
 max-width: 280px;
+margin: 0 auto;
+    @include min768{
+        max-width: 620px;
+    }
+    @include min1200{
+        max-width: 926px;
+    }
 }
 
 .review-card__img{
 margin-bottom: 30px;
 margin-left: auto;
 margin-right: auto;
+    @include min768{
+        margin-bottom: 20px;
+    }
+    @include min1200{
+        margin-bottom: 15px;
+    }
 }
 
 .review-card__text{
-@include font(12px, 500, 2.5, 0.04em);
+@include font(12px, 500, 2.5, null);
 text-align: center;
-color: #000000;
+color: var(--main-text-color);
 padding: 40px 57px 20px 57px;
 
     &::before{
@@ -31,20 +47,41 @@ padding: 40px 57px 20px 57px;
     top: 28px;
     left: 60px;
     }
+    @include min768{
+        @include font (14px, 500, 2.1, null)
+    }
+    @include min1200{
+        @include font (16px, 500, 1.8, null)
+    }
 }
 
 .review-local-wrap{
-    margin: 30px 74px 86px 74px;
+    padding-left: 74px;
+    padding-right: 74px;
 }
 
 .review-local{
-@include font(14px, 500, 1.8, 0.04em);
+@include font(14px, 500, 1.8, null);
 text-align: center;
-color: #000000;
+color: var(--main-text-color);
+margin-bottom: 30px;
 
     &::before{
         content: url("data:image/svg+xml,%3Csvg width='32' height='4' viewBox='0 0 32 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='2' r='2' fill='%23C7133E'/%3E%3Ccircle cx='2' cy='2' r='2' fill='%23C7133E'/%3E%3Ccircle cx='30' cy='2' r='2' fill='%23C7133E'/%3E%3C/svg%3E%0A");
     display: block;
     margin-bottom: 18px;
     }
+     @include min768{
+        @include font (16px, 500, 1.8, null)
+    }
+    @include min1200{
+        @include font (20px, 500, 1.8, null)
+    }
+}
+
+// ------- mySwiper-----
+
+.swiper-button-next, 
+.swiper-button-prev{
+    fill: var(---accent-color);
 }
