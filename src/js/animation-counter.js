@@ -59,23 +59,23 @@
     }
     // run animation
     let runall = function () {
-      timer('counter-1', 721, 6, 4);
-      timer('counter-2', 16, 1, 2);
-      timer('counter-3', 84, 4, 6.4);
+      timer('counter-1', 721, [4, 3, 1], 3);
+      timer('counter-2', 16, [1, 1, 1], 1);
+      timer('counter-3', 84, [4, 2, 1], 4);
     };
 
     let run1 = function () {
-      timer('counter-1', 721, 6, 4);
+      timer('counter-1', 721, [6, 1, 1], 3);
     };
 
     let run2 = function () {
-      timer('counter-2', 16, 1, 2);
+      timer('counter-2', 16, [1, 1, 1], 2);
     };
 
     let run3 = function () {
-      timer('counter-3', 84, 3, 6);
+      timer('counter-3', 84, [4, 2, 1], 4);
     };
-    
+
     //the animation 
     function timer(id, b, c, d) {
       let numbers = document.getElementById(id);
@@ -83,7 +83,7 @@
       let currentNumber = 0;
       let maxNumber = b;
 
-      let step = c;
+      let step = c[0];
       let steps = [b - b * 0.15, b - b * 0.09];
 
       let duration = d;
@@ -97,11 +97,11 @@
           numbers.innerText = maxNumber;
           console.log('finish');
         } else if (currentNumber > steps[0]) {
-          step = 1;
+          step = c[1];
           speed = speed + speed / 50;
           setTimeout(fun, speed);
         } else if (currentNumber > steps[1]) {
-          step = 1;
+          step = c[2];
           speed = speed + speed;
           setTimeout(fun, speed);
         } else {
