@@ -9,26 +9,23 @@
   --sub-title-color: #ffa5ba;
   --loc-hov-btn: #d41342;
 }
-@mixin font($fs, $fw, $lh, $ls) {
-  font-size: $fs;
-  font-weight: $fw;
-  line-height: $lh;
-  letter-spacing: $ls;
-}
 
-@mixin flex($dis, $jc, $ali) {
-  display: $dis;
-  justify-content: $jc;
-  align-items: $ali;
-}
 .contacts {
   background: linear-gradient(180deg, #fff 11%, #fff5f6 0);
+  @include min1280 {
+    padding-top: 132px;
+    background: url(../images/contacts-bg-desktop@1x.png);
+  }
 }
 
 .contacts__list {
   margin-bottom: 54px;
   @include min768 {
     @include flex(flex, null, null);
+    margin-bottom: 81px;
+  }
+  @include min1280 {
+    margin-bottom: 86px;
   }
 }
 .contacts__item {
@@ -49,6 +46,9 @@
       margin-bottom: 0px;
       margin-right: 20px;
     }
+    @include min1280 {
+      margin-right: 29px;
+    }
   }
 }
 .contacts__card-top {
@@ -58,7 +58,7 @@
     padding-bottom: 30px;
   }
   @include min1280 {
-    padding-bottom: 25px;
+    padding-bottom: 32px;
   }
 }
 .contacts__name {
@@ -78,6 +78,10 @@
     height: 28px;
     margin-bottom: 30px;
   }
+  @include min1280 {
+    @include font(16px, 500, 186%, 0.04em);
+    margin-bottom: 32px;
+  }
 }
 .contacts__name--green {
   width: 130px;
@@ -85,6 +89,10 @@
   @include min768 {
     @include font(16px, 500, 186%, 0.04em);
     width: 138px;
+  }
+  @include min1280 {
+    @include font(16px, 500, 186%, 0.04em);
+    margin-bottom: 32px;
   }
 }
 .contacts__location {
@@ -95,12 +103,19 @@
     @include font(14px, 500, 186%, 0.04em);
     margin-bottom: 14px;
   }
+  @include min1280 {
+    @include font(16px, 500, 186%, 0.04em);
+    margin-bottom: 10px;
+  }
 }
 .description {
   @include font(12px, 500, 150%, null);
   color: var(--secondary-text-color);
   @include min768 {
     @include font(14px, 500, 166%, 0.04em);
+  }
+  @include min1280 {
+    @include font(16px, 500, 183%, 0.04em);
   }
 }
 .contacts__card-middle {
@@ -109,12 +124,18 @@
   @include min768 {
     padding: 30px 0;
   }
+  @include min1280 {
+    padding: 32px 0;
+  }
 }
 .contacts__schedule {
   @include font(12px, 500, 186%, null);
   color: var(--main-text-color);
   @include min768 {
     @include font(14px, 500, 186%, null);
+  }
+  @include min1280 {
+    @include font(16px, 500, 186%, null);
   }
 }
 .contacts__time {
@@ -123,10 +144,16 @@
   @include min768 {
     @include font(14px, 500, 186%, null);
   }
+  @include min1280 {
+    @include font(16px, 500, 186%, null);
+  }
   &:not(:last-child) {
     margin-bottom: 10px;
     @include min768 {
       margin-bottom: 16px;
+    }
+    @include min1280 {
+      margin-bottom: 15px;
     }
   }
 }
@@ -135,12 +162,18 @@
   @include min768 {
     padding-top: 30px;
   }
+  @include min1280 {
+    padding-top: 32px;
+  }
 }
 .contacts__link {
   @include font(12px, 500, 150%, null);
   color: var(--secondary-text-color);
   @include min768 {
     @include font(14px, 500, 183%, null);
+  }
+  @include min1280 {
+    @include font(16px, 500, 183%, null);
   }
 }
 // .contacts__tel {
