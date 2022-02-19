@@ -75,7 +75,8 @@
     let run3 = function () {
       timer('counter-3', 84, 3, 6);
     };
-    //the animation
+    
+    //the animation 
     function timer(id, b, c, d) {
       let numbers = document.getElementById(id);
 
