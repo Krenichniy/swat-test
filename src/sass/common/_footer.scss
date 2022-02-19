@@ -51,6 +51,11 @@ padding-left: 22px;
     fill: #ffffff;
     background-color: #FEA5BB;
     border-radius: 50%;
+
+    & :focus,
+    & :hover {
+        background-color: #d41443;
+    }
 }
 
 .footer__link--text,
