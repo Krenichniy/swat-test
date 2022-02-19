@@ -25,7 +25,7 @@
   }
 }
 
-.header__nav {
+.header__desktop-nav {
   margin-left: 240px;
   @include max1279 {
     display: none;
@@ -61,7 +61,7 @@
   @include flex(flex, center, center);
 }
 
-.mob-menu-btn {
+.mob-menu__open-btn {
   @include flex(flex, center, center);
   padding: 0;
   background-color: transparent;
@@ -90,4 +90,27 @@
     width: 6px;
     height: 10px;
   }
+}
+
+.header__mob-menu {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  background-color: #e17992;
+  width: 250px;
+  height: 100%;
+  padding: 23px 28px 23px 21px;
+  @include min768 {
+    width: 40vw;
+  }
+  @include min1280 {
+    display: none;
+  }
+}
+
+.mob-menu__close-btn {
+  @include flex(flex, center, center);
+  padding: 0;
+  background-color: transparent;
+  margin-left: auto;
 }
