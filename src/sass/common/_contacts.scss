@@ -194,76 +194,46 @@
   @include min768 {
     flex-direction: row;
   }
-  // }
-  // .contacts__btn {
-  //   //   width: 161px;
-  //   //   height: 44px;
-  //   &:not(:last-child) {
-  //     margin-bottom: 10px;
-  //     @include min768 {
-  //       margin-right: 15px;
-  //       margin-bottom: 0px;
-  //     }
-  //   }
-  // }
-  // .contacts__btn--white {
-  //   @include font(16px, 700, 1.31, null);
-  //   padding: 19px 37px 17px 37px;
-  // }
-  // .contacts__btn--red {
-  //   @include font(16px, 700, 1.31, null);
-  //   padding: 19px 36px 17px 36px;
-  // }
-  // // ----------------------------------
-  // .first-btn__finish {
-  //   fill: var(--accent-color);
-  //   margin-left: 12px;
-  // }
-  // .second-btn__finish {
-  //   fill: var(--main-white-color);
-  //   margin-left: 12px;
-  // }
-  // .second-btn {
-  //   @include flex(flex, center, center);
-  //   color: var(--main-white-color);
-  //   border-radius: 22px;
-  //   background-color: var(--accent-color);
+  .second-btn {
+    @include flex(flex, center, center);
+    color: var(--main-white-color);
+    border-radius: 22px;
+    background-color: var(--accent-color);
 
-  //   &:hover,
-  //   &:focus {
-  //     background-color: var(--dark-btn-hover);
-  //   }
-  // }
-  // .first-btn {
-  //   @include flex(flex, center, center);
-  //   color: var(--accent-color);
-  //   border-radius: 22px;
-  //   background-color: var(--main-white-color);
+    &:hover,
+    &:focus {
+      background-color: var(--dark-btn-hover);
+    }
+  }
 
-  //   &:hover,
-  //   &:focus {
-  //     background-color: var(--light-btn-hover);
-  //   }
-  //   .first-btn {
-  //     @include flex(flex, center, center);
-  //     width: 115px;
-  //     color: var(--accent-color);
-  //     border-radius: 22px;
-  //     background-color: var(--main-white-color);
+  .second-btn__start {
+    @include font(16px, 700, 1.31, null);
+    padding: 19px 36px 17px 36px;
+  }
 
-  //     &:hover,
-  //     &:focus {
-  //       background-color: var(--light-btn-hover);
-  //     }
-  //   }
+  .second-btn__finish {
+    fill: var(--main-white-color);
+    margin-left: 12px;
+  }
+  .first-btn {
+    @include flex(flex, center, center);
+    color: var(--accent-color);
+    border-radius: 22px;
+    background-color: var(--main-white-color);
 
-  //   .first-btn__start {
-  //     @include font(16px, 700, 1.31, null);
-  //     padding: 0px 17px;
-  //   }
+    &:hover,
+    &:focus {
+      background-color: var(--light-btn-hover);
+    }
+  }
 
-  //   .first-btn__finish {
-  //     fill: var(--accent-color);
-  //     margin-left: 12px;
-  //   }
+  .first-btn__start {
+    @include font(16px, 700, 1.31, null);
+    padding: 19px 37px 17px 37px;
+  }
+
+  .first-btn__finish {
+    fill: var(--accent-color);
+    margin-left: 12px;
+  }
 }
