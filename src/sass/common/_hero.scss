@@ -95,14 +95,27 @@
 
 .top-box__link {
   padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include font(8px, 400, (10 / 8), null);
+  @include min1280 {
+    @include font(14px, 400, (18 / 14), null);
+  }
 }
 
 .top-box__link.second-btn {
   width: 62px;
   height: 24px;
-  @include font(8, 400, (10 / 8), null);
   @include min1280 {
     width: 102px;
+    height: 40px;
+  }
+}
+
+.top-box__link.first-btn {
+  width: 82px;
+  height: 24px;
+  @include min1280 {
+    width: 138px;
     height: 40px;
   }
 }
@@ -304,17 +317,21 @@
 
 .hero__icecream-circle {
   position: absolute;
+  top: 83px;
   right: -20%;
-  bottom: 75px;
   width: 346px;
   height: 344px;
   background-color: var(--sub-title-color);
   border-radius: 50%;
   @include min768 {
+    top: 31px;
+    right: 137px;
     width: 324px;
     height: 322px;
   }
   @include min1280 {
+    top: 52px;
+    right: 182px;
     width: 538px;
     height: 538px;
   }
