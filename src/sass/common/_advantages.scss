@@ -61,9 +61,9 @@
 
     // <---------------------  adv-icons  --------------------->
     $adv-img: (
-      '1': '../images/721@',
-      '2': '../images/16kg@',
-      '3': '../images/84@',
+      '1': #{'url("'}'../images/721@',
+      '2': #{'url("'}'../images/16kg@',
+      '3': #{'url("'}'../images/84@',
     );
 
     $adv-img-w: (
@@ -73,34 +73,15 @@
     );
 
     @for $i from 1 to length($adv-img) + 1 {
-      &:nth-child(#{$i}) > .advantages__title::before {
+      &:nth-child(#{$i})::before {
         $bg: map-get($adv-img, '#{$i}');
-        background-image: #{'url("'}#{$bg}#{'1x.png")'};
+        background-image: #{$bg}#{'1x.png")'};
         width: map-get($adv-img-w, '#{$i}');
 
         @include adv-bg-2x {
-          background-image: #{'url("'}#{$bg}#{'2x.png")'};
+          background-image: #{$bg}#{'2x.png")'};
         }
       }
-    }
-    // <------------------- end adv-icons -------------------->
-  }
-  &__title {
-    font-family: Titan One;
-    @include font(36px, normal, calc(41 / 36), inherit);
-    text-transform: uppercase;
-
-    color: #d41443;
-
-    margin-bottom: 16px;
-
-    @include min768 {
-      font-size: 48px;
-      line-height: 55px;
-    }
-    @include min1280 {
-      font-size: 58px;
-      line-height: 66px;
     }
 
     &::before {
@@ -120,6 +101,26 @@
       @include min1280 {
         margin-bottom: 40px;
       }
+    }
+    // <------------------- end adv-icons -------------------->
+  }
+
+  &__title {
+    font-family: Titan One;
+    @include font(36px, normal, calc(41 / 36), inherit);
+    text-transform: uppercase;
+
+    color: var(--accent-color);
+
+    margin-bottom: 16px;
+
+    @include min768 {
+      font-size: 48px;
+      line-height: 55px;
+    }
+    @include min1280 {
+      font-size: 58px;
+      line-height: 66px;
     }
   }
 
