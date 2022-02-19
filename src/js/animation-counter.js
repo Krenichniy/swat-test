@@ -59,21 +59,21 @@
     }
     // run animation
     let runall = function () {
-      timer('counter-1', 721, 3, 3);
-      timer('counter-2', 16, 1, 4);
-      timer('counter-3', 84, 2, 6.4);
+      timer('counter-1', 721, 6, 4);
+      timer('counter-2', 16, 1, 2);
+      timer('counter-3', 84, 4, 6.4);
     };
 
     let run1 = function () {
-      timer('counter-1', 721, 3, 3);
+      timer('counter-1', 721, 6, 4);
     };
 
     let run2 = function () {
-      timer('counter-2', 16, 1, 4);
+      timer('counter-2', 16, 1, 2);
     };
 
     let run3 = function () {
-      timer('counter-3', 84, 2, 6.4);
+      timer('counter-3', 84, 3, 6);
     };
     //the animation
     function timer(id, b, c, d) {
