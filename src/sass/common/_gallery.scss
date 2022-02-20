@@ -1,0 +1,160 @@
+.gallery-section {
+  background: -webkit-linear-gradient(180deg, rgb(255, 245, 246) 50%, rgb(255, 255, 255) 50%);
+  background: -moz-linear-gradient(180deg, rgb(255, 245, 246) 50%, rgb(255, 255, 255) 50%);
+  background: linear-gradient(180deg, rgb(255, 245, 246) 50%, rgb(255, 255, 255) 50%);
+  max-width: 768px;
+
+  padding: 50px 0 40px 0;
+  @include min768 {
+    max-width: 1280px;
+    padding: 70px 0 60px 0;
+  }
+  @include min1280 {
+    max-width: 100%;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 288px;
+  @include min480 {
+    max-width: 400px;
+  }
+  @include min768 {
+    max-width: 618px;
+  }
+  @include min1280 {
+    max-width: 1020px;
+  }
+}
+
+.gallery-img-container {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 2px;
+    @include min480 {
+      margin-right: 3px;
+    }
+    @include min768 {
+      margin-right: 5px;
+    }
+    @include min1280 {
+      margin-right: 8px;
+    }
+  }
+  &-1,
+  &-6 {
+    padding-top: 40px;
+    max-width: 40px;
+    @include min480 {
+      max-width: 56px;
+      padding-top: 56px;
+    }
+    @include min768 {
+      padding-top: 85px;
+      max-width: 85px;
+    }
+    @include min1280 {
+      padding-top: 140px;
+      max-width: 140px;
+    }
+  }
+  &-2,
+  &-4 {
+    padding-top: 25px;
+    max-width: 40px;
+    @include min480 {
+      max-width: 56px;
+      padding-top: 35px;
+    }
+    @include min768 {
+      padding-top: 53px;
+      max-width: 85px;
+    }
+    @include min1280 {
+      max-width: 140px;
+      padding-top: 100px;
+    }
+  }
+  &-3 {
+    max-width: 80px;
+    @include min480 {
+      max-width: 115px;
+    }
+    @include min768 {
+      max-width: 175px;
+    }
+    @include min1280 {
+      max-width: 285px;
+    }
+  }
+
+  &-5 {
+    padding-top: 15px;
+    max-width: 40px;
+    @include min480 {
+      max-width: 56px;
+      padding-top: 22px;
+    }
+    @include min768 {
+      padding-top: 30px;
+      max-width: 85px;
+    }
+    @include min1280 {
+      max-width: 140px;
+      padding-top: 50px;
+    }
+  }
+}
+
+.gallery-img {
+  border-radius: 6px;
+  position: relative;
+  transform: scale(1);
+  transition: box-shadow 400ms linear, border 650ms linear, transform 500ms;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include min480 {
+    border-radius: 10px;
+  }
+  @include min768 {
+    border-radius: 15px;
+  }
+  @include min1280 {
+    border-radius: 20px;
+  }
+  &:hover {
+    transform: scale(1.7);
+    box-shadow: 1px 4px 6px 0px #000000, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+    z-index: 2;
+    border: 0.5px solid var(--accent-color);
+  }
+  &-2,
+  &-4,
+  &-6,
+  &-8 {
+    margin-bottom: 2px;
+    @include min480 {
+      margin-bottom: 3px;
+    }
+    @include min768 {
+      margin-bottom: 5px;
+    }
+    @include min1280 {
+      margin-bottom: 8px;
+    }
+  }
+  &-5 {
+    max-width: 40px;
+    @include min480 {
+      max-width: 56px;
+    }
+    @include min768 {
+      max-width: 85px;
+    }
+    @include min1280 {
+      max-width: 140px;
+    }
+  }
+}
