@@ -1,0 +1,381 @@
+.contacts-location-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(255, 248, 220, 0.4);
+}
+
+//.modal-is-hidden {
+// visibility: hidden;
+// opacity: 0;
+// pointer-events: none;
+//}
+
+.location-map {
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  padding: 10px 10px;
+
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms;
+  @include min480 {
+    height: 80vh;
+    width: 450px;
+  }
+  @include min768 {
+    width: 85vw;
+    height: 85vh;
+  }
+  @include min1280 {
+    width: 85vw;
+    height: 85vh;
+  }
+}
+.location-form {
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+  height: 95%;
+  @include min480 {
+    width: 95%;
+    padding: 5px 5px;
+  }
+}
+
+.contacts-location-modal-close,
+.contacts-franchise-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 3px 3px;
+
+  @include flex(flex, center, center);
+  background-color: var(--dark-btn-hover);
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  fill: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: var(--dark-btn-hover);
+  }
+}
+
+.location-form__title {
+  display: block;
+  margin-bottom: 10px;
+  font-family: Titan One;
+  @include font(14px, 400, 1.12, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #d41443;
+  @include min768 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  @include min1280 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+// Стилі Franchise
+.contacts-franchise-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(255, 248, 220, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.modal-is-hidden .contacts-franchise-modal {
+    transform: scale(2) translate(0);
+  }
+}
+
+.franchise-modal {
+  position: absolute;
+  display: block;
+  width: 90vw;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  padding: 20px 20px;
+
+  background: #ffdde1;
+
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms;
+  @include min480 {
+    width: 440px;
+    height: 90vh;
+  }
+  @include min768 {
+    width: 700px;
+    height: 90vh;
+    animation: background 5000ms linear 2s infinite alternate;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    @keyframes background {
+      50% {
+        background: #ee9ca7;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+          0px 2px 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  @include min1280 {
+    width: 1000px;
+    height: 80vh;
+  }
+}
+
+.contacts-franchise-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 3px 3px;
+
+  @include flex(flex, center, center);
+  background-color: rgba(255, 20, 147, 0.2);
+  border: 1px solid rgba(245, 129, 200, 0.637);
+  border-radius: 50%;
+  fill: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+    border: 1px solid rgba(245, 129, 200, 0.637);
+    border-radius: 50%;
+    fill: #fff;
+  }
+}
+.franchise-title {
+  display: none;
+
+  @include min768 {
+    display: block;
+    flex-wrap: wrap;
+
+    font-family: Titan One;
+    margin-bottom: 15px;
+    @include font(35px, 400, 1.12, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    color: #d41443;
+  }
+}
+.franchise-list {
+  display: none;
+  @include min768 {
+    @include flex(flex, start, center);
+    flex-wrap: wrap;
+    margin-left: -20px;
+  }
+}
+
+.franchise-list__item {
+  margin-bottom: 15px;
+  margin-left: 20px;
+
+  box-sizing: border-box;
+  transform: scale(1, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.4, 1.4);
+    transition: transform 250ms;
+  }
+  @include min768 {
+    width: calc(100% / 5 - 20px);
+    margin-left: 20px;
+    .franchise-list__item:nth-last-child(-n + 5) {
+      margin-bottom: 0;
+    }
+
+    .franchise-list__item + .franchise-list__item {
+      margin-left: 20px;
+    }
+    .franchise-list__item:nth-child(5n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.franchise-form__title {
+  display: block;
+  font-family: Titan One;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  @include font(25px, 400, 1.12, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #d41443;
+  @include min768 {
+    margin-bottom: 15px;
+    font-size: 35px;
+  }
+}
+
+.franchise-form__field {
+  input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    padding-right: 12px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    outline: none;
+
+    border: 1px solid #d41342;
+    border-radius: 4px;
+
+    background-color: transparent;
+    @include min480 {
+      width: 350px;
+    }
+    @include min768 {
+      width: 604px;
+    }
+    @include min1280 {
+      width: 904px;
+    }
+  }
+}
+.franchise-form__field {
+  @include flex(flex, start, left);
+  flex-direction: column;
+}
+.franchise-form__lable {
+  margin-bottom: 7px;
+
+  color: #d41342;
+  @include font(12px, 400, 1.17, 0.01em);
+  @include min768 {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+}
+.franchise-form__align-icon {
+  position: relative;
+  margin-bottom: 30px;
+
+  @include min768 {
+    margin-bottom: 10px;
+  }
+}
+.franchise-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #fff;
+  .franchise-form__input:focus ~ & {
+    fill: #d41342;
+  }
+}
+.franchise-form__input {
+  &:focus {
+    border: 1px solid #d41342;
+  }
+}
+.franchise-form__button {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-style: normal;
+  @include font(16px, bold, 1.87, 0.06em);
+  text-align: center;
+  color: #d41342;
+
+  background-color: var(--main-white-color);
+  border-radius: 22px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0px 4px 4px var(--dark-btn-hover);
+  border-color: inherit;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: var(--dark-btn-hover);
+    color: var(--main-white-color);
+  }
+}
+.franchise-checkbox__input {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.franchise-checkbox__icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 8px;
+  border: 2px solid var(--dark-btn-hover);
+  border-radius: 2px;
+  .franchise-checkbox__input:checked + & {
+    background-color: var(--dark-btn-hover);
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: var(--dark-btn-hover);
+    border-radius: 2px;
+  }
+}
+.franchise-checkbox__text {
+  @include font(16px, 400, 1.16, 0.03em);
+  font-family: sans-serif;
+  color: var(--dark-btn-hover);
+  @include min768 {
+    color: var(--main-white-color);
+  }
+}
+.franchise-checkbox {
+  @include flex(flex, start, center);
+  margin-bottom: 20px;
+
+  font-style: normal;
+  text-decoration-skip-ink: none;
+  color: var(--accent-text-color);
+  &:focus {
+    background-color: var(--dark-btn-hover);
+
+    background-size: contain;
+    background-origin: border-box;
+    border: var(--accent-text-color);
+    border-radius: 2px;
+  }
+  @include min768 {
+    @include font(14px, 400, 1.71, 0.03);
+  }
+}
