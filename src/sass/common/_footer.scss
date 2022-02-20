@@ -126,6 +126,11 @@
   @include min768 {
     @include flex(flex, space-between, baseline);
     flex-wrap: wrap;
+    margin-left: 92px;
+  }
+  @include min1280 {
+    @include flex(flex, space-between, baseline);
+    margin-left: 257px;
   }
 }
 
