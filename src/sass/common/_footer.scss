@@ -15,9 +15,9 @@
     // @include min768 {
     //   @include flex(flex, space-beetwen, baseline);
     // }
-    @include max767 {
-        margin-bottom: 43px;
-      }
+    // @include max767 {
+    //     margin-bottom: 43px;
+    //   }
       @include min1200 {
         margin-bottom: 97px;
       }
@@ -27,14 +27,30 @@
         justify-content: space-between;
       }
   }
-
-
+  .footer-slogan
+  {
+    @include max767 {
+      margin-bottom: 43px;
+    }
   
+    @include min768 {
+      width: 340px;
+    }
+    @include min1200 {
+      width: 472px;
+    }
+  }
+
 .footer__title  {
 color: #FEA5BB;
 font-family: Titan One;
 text-transform: uppercase;
-@include font(18px,normal,1.17, null);
+@include font(18px,normal,1.14, 0.04px);
+
+    @include max767px {
+      width: 232px;
+    }
+    align-items: flex-start;
 // font-style: normal;
 // font-weight: normal;
 // font-size: 18px;
