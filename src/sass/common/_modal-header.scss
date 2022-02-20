@@ -10,11 +10,11 @@
   overflow-y: scroll;
 }
 
-// .backdrop.is-hidden {
-//   .modal-header {
-//     transform: scale(0.2) rotate(180deg);
-//   }
-// }
+.backdrop.is-hidden {
+  .modal-header {
+    transform: scale(0.2) rotate(180deg);
+  }
+}
 
 .is-hidden {
   visibility: hidden;
@@ -28,16 +28,14 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
   border-radius: 5px;
-  // top: 10px;
-  // left: 50%;
-  // transform: translate(-50%) scale(1);
   width: 90vw;
-  @media screen and (min-width: 480px) {
+
+  @include min480 {
     width: 450px;
     min-height: 609px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include min1280 {
     width: 526px;
     min-height: 581px;
   }
@@ -55,36 +53,38 @@
 
 .modal-header__close {
   position: absolute;
-  top: 10px;
+  top: 21px;
   right: 8px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
+  @include min480 {
+    top: 10px;
+    width: 35px;
+    height: 35px;
+  }
   border-radius: 50%;
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex, center, center);
   cursor: pointer;
+  
 }
 
 .modal-header__icon {
-  .modal__close:hover &,
-  .modal__close:focus & {
+  .modal-header__close:hover &,
+  .modal-header__close:focus & {
     fill: var(--accent-color);
   }
   transition: fill 300ms ease-out;
 }
 
 .modal-header__title {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 1.5;
-  @media screen and (min-width: 1200px) {
-    font-size: 25px;
+  font-family: Titan One;
+  @include font(26px, 700, 1.16, 0.04em);
+
+  @include min1280 {
+    font-size: 27px;
     line-height: 1.21;
   }
-  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
 
@@ -110,7 +110,7 @@
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  .form__input:focus + & {
+  .header-form__input:focus + & {
     fill: var(--accent-color);
   }
   transition: fill 300ms ease-out;
@@ -132,17 +132,15 @@
 
 .header-form__label {
   display: inline-block;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+  font-family: DM Sans;
+  @include font(14px, 400, 1.16, 0.03em);
   margin-bottom: 4px;
 
   color: var(--secondary-text-color);
 }
 
-.modal-order {
-  display: flex;
-  justify-content: space-evenly;
+.modal-order__group {
+  @include flex(flex, space-evenly, center);
   margin-bottom: 40px;
 }
 
@@ -156,30 +154,35 @@
   background-color: var(--accent-color);
 }
 
-.modal-order__checkbox:checked + .modal-order__label {
+.modal-order__checkbox:checked + .modal-order__label .modal-order__text {
   color: var(--accent-color);
 }
 
-.modal-order__label {
-  color: var(--sub-title-color);
-  font-size: 16px;
-  line-height: 1.17;
+.modal-order__text {
+  font-family: Titan One;
+  @include font(10px, 400, 1.14, 0.03em);
+  @include min480 {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  @include min1280 {
+    font-size: 16px;
+  }
   text-transform: uppercase;
+  color: var(--sub-title-color);
+
   transition: color 300ms ease-out;
 }
 
 .modal-order__label::after {
   content: '';
-  display: inline-block;
+  display: inline-flex;
   width: 20px;
   height: 20px;
   border: 1px solid var(--accent-color);
   border-radius: 2px;
   margin-left: 7px;
-  display: inline-flex;
   transition: background-color 300ms ease-out;
-  // align-items: baseline;
-  // justify-content: center;
 }
 
 .modal-order__checkbox {
@@ -189,37 +192,21 @@
 }
 
 .form__form-check {
-  display: flex;
-  justify-content: center;
+  @include flex(flex, center, null);
   margin-bottom: 70px;
 }
 
 .form-check__text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex, center, center);
   font-family: inherit;
-  font-size: 12px;
-  line-height: 1.17;
-  @media screen and (min-width: 1200px) {
+  @include font(13px, 400, 1.17, 0.04em);
+  @include min1280 {
     font-size: 14px;
     line-height: 1.71;
   }
-  letter-spacing: 0.03em;
-
   color: var(--accent-color);
 }
 
-// .order-check-icon {
-//   width: 16px;
-//   height: 15px;
-//   border: 1px solid var(--accent-color);
-//   border-radius: 2px;
-//   margin-right: 7px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
 
 .form-check__text span {
   margin-left: auto;
@@ -228,10 +215,8 @@
   border: 1px solid var(--accent-color);
   color: transparent;
   border-radius: 2px;
+  @include flex(flex, center, center);
   margin-right: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color 300ms ease-out, fill 300ms ease-out;
 }
 
@@ -239,42 +224,22 @@
   fill: transparent;
 }
 
-.form-check__agree:checked + .form-check__text span {
+.form-check__policy:checked + .form-check__text span {
   border: none;
   background-color: var(--accent-color);
   fill: var(--main-white-color);
 }
 
-// .btn {
-//   font-family: inherit;
-//   font-weight: 600;
-//   font-size: 12px;
-//   line-height: 1.33;
-//   letter-spacing: 0.09em;
-//   text-transform: uppercase;
-//   border: 1px solid var(--accent-color);
-//   border-radius: 25px;
-//   background-color: transparent;
-//   min-width: 160px;
-//   min-height: 40px;
-// }
 
 .modal-header__submit {
-  // display: inline-block;
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-  letter-spacing: 0.09em;
+@include flex(flex, center, center);
+  color: var(--main-white-color);
   border-radius: 22px;
+  background-color: var(--accent-color);
+  @include font(16px, 700, 1.31, null);
   min-width: 200px;
   min-height: 50px;
 
-  // display: flex;
-  // align-items: center;
-  // text-align: center;
-  background: var(--accent-color);
-  color: var(--main-white-color);
   &:hover,
   &:focus {
     background-color: var(--main-white-color);
@@ -282,10 +247,10 @@
     box-shadow: 10px 10px 8px 2px rgba(255, 128, 128, 0.4), 0px 1px 1px rgba(255, 179, 179, 0.2),
       0px 2px 1px rgba(255, 77, 77, 0.4);
   }
+
   transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out;
 }
 
 .modal-header__button-wrap {
-  display: flex;
-  justify-content: center;
+  @include flex(flex, center, null);
 }
