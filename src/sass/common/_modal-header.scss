@@ -45,10 +45,27 @@
     0px 2px 1px rgba(255, 77, 77, 0.4);
   border-radius: 4px;
   transition: transform 300ms ease-out;
+
   background-image: url(../images/products-icecream-mob@1x.png);
   background-repeat: no-repeat;
   background-position: bottom 5px left;
   background-size: 210px;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/products-icecream-mob@2x.png);
+  }
+
+  @include min768 {
+    background-image: url(../images/products-icecream-tab@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/products-icecream-tab@2x.png);
+    }
+  }
+  @include min1280 {
+    background-image: url(../images/products-icecream-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/products-icecream-desktop@2x.png);
+    }
+  }
 }
 
 .modal-header__close {
@@ -66,7 +83,6 @@
   background-color: transparent;
   @include flex(flex, center, center);
   cursor: pointer;
-  
 }
 
 .modal-header__icon {
@@ -133,7 +149,7 @@
 .header-form__label {
   display: inline-block;
   font-family: DM Sans;
-  @include font(14px, 400, 1.16, 0.03em);
+  @include font(14px, 400, 1.16, 0.04em);
   margin-bottom: 4px;
 
   color: var(--secondary-text-color);
@@ -145,9 +161,13 @@
 }
 
 .modal-order__checkbox-img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 5px;
+  @include min480 {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .modal-order__checkbox:checked + .modal-order__label::after {
@@ -160,7 +180,7 @@
 
 .modal-order__text {
   font-family: Titan One;
-  @include font(10px, 400, 1.14, 0.03em);
+  @include font(10px, 400, 1.14, 0.04em);
   @include min480 {
     font-size: 13px;
     line-height: 1.5;
@@ -207,7 +227,6 @@
   color: var(--accent-color);
 }
 
-
 .form-check__text span {
   margin-left: auto;
   width: 16px;
@@ -230,9 +249,8 @@
   fill: var(--main-white-color);
 }
 
-
 .modal-header__submit {
-@include flex(flex, center, center);
+  @include flex(flex, center, center);
   color: var(--main-white-color);
   border-radius: 22px;
   background-color: var(--accent-color);
