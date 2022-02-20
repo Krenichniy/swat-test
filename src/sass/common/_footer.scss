@@ -16,12 +16,12 @@
       margin-bottom: 43px;
     }
   
-    @include min768 {
-      width: 700px;
-    }
-    @include min1280 {
-      width: 472px;
-    }
+    // @include min768 {
+    //   width: 700px;
+    // }
+    // @include min1280 {
+    //   width: 472px;
+    // }
   }
   .container.down {
       @include min1280 {
@@ -92,10 +92,6 @@
     border-radius: 50%;
     transition: fill 250ms linear, background-color 250ms linear;
 
-    // & :focus,
-    // & :hover {
-    //     background-color: #d41443;
-    // }
 }
 .footer-social__link {
   border-radius: 50%;
@@ -128,7 +124,8 @@
 }
 .footer__media {
   @include min768 {
-    @include flex(flex, space-between, baseline)
+    @include flex(flex, space-between, baseline);
+    flex-wrap: wrap;
   }
 }
 
