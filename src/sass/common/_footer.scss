@@ -47,7 +47,7 @@ font-family: Titan One;
 text-transform: uppercase;
 @include font(18px,normal,1.14, 0.04px);
 
-    @include max767px {
+    @include max767 {
       width: 232px;
     }
     align-items: flex-start;
