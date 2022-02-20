@@ -189,10 +189,7 @@ text-transform: uppercase;
   display: block;
   border-top: 1px solid #E1E1E1;
   text-align: center;
-  @include max767 {
-    width: 150px;
-  }
-}
+ }
 .copyright__title {
 color: #907E82; 
 font-family: DM Sans;
@@ -202,6 +199,9 @@ padding-top: 9px;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
+@include max767 {
+  width: 150px;
+}
 @include min768 {
   width: 100%;
 }
