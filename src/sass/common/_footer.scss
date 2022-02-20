@@ -37,8 +37,11 @@
       @include min768 {
         margin-bottom: 91px;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+      } 
+        @include min768 {
+            @include flex(flex, space-beetwen, baseline);
       }
   }
   
