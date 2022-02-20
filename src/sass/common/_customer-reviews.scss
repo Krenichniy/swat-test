@@ -16,7 +16,7 @@ z-index: -3;
     @include min768{
         max-width: 620px;
     }
-    @include min1200{
+    @include min1280{
         max-width: 926px;
     }
 }
@@ -28,7 +28,7 @@ margin-right: auto;
     @include min768{
         margin-bottom: 20px;
     }
-    @include min1200{
+    @include min1280{
         margin-bottom: 15px;
     }
 }
@@ -37,7 +37,7 @@ padding: 40px 60px 20px 60px;
 @include min768{
         padding: 30px 38px 28px 38px;
     }
-    @include min1200{
+    @include min1280{
         padding: 30px 52px 30px 52px;
     }
 }
@@ -57,7 +57,7 @@ background: repeating-linear-gradient(transparent, transparent 28px, #e1e1e1, #e
             top: 20px;
             left: 40px;
         }
-        @include min1200{
+        @include min1280{
             top: 32px;
             left: 50px;
         }
@@ -68,7 +68,7 @@ background: repeating-linear-gradient(transparent, transparent 28px, #e1e1e1, #e
         @include font (14px, 500, 2.1, null);
         margin-bottom: 24px;
     }
-    @include min1200{
+    @include min1280{
         @include font (16px, 500, 1.8, null);
         padding: 30px 52px 30px 52px;
     }
@@ -81,7 +81,7 @@ background: repeating-linear-gradient(transparent, transparent 28px, #e1e1e1, #e
         padding-left: 80px;
         padding-right: 80px;
     }
-    @include min1200{
+    @include min1280{
         padding-left: 87px;
         padding-right: 87px;
     }
@@ -100,7 +100,7 @@ margin-bottom: 30px;
         @include min768{
             margin-bottom: 14px;
         }
-        @include min1200{
+        @include min1280{
             margin-bottom: 15px;
         }
     }
@@ -108,7 +108,7 @@ margin-bottom: 30px;
         @include font (16px, 500, 1.8, null);
         
     }
-    @include min1200{
+    @include min1280{
         @include font (20px, 500, 1.8, null);
         margin-bottom: 35px;
        
