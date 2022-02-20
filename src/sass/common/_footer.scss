@@ -95,14 +95,14 @@
 
 .footer-social__list {
   margin-bottom: 46px;
-  display: flex;  
-  justify-content: flex-end;
+  // display: flex;  
+  // justify-content: flex-end;
   @include min768 {
     margin-bottom: 50px;
   }
-  .footer-social__item:not(:last-child) {
-    margin-right: 24px;
-  }
+  // .footer-social__item:not(:last-child) {
+  //   margin-right: 24px;
+  // }
   
 }
 .footer__contact {
