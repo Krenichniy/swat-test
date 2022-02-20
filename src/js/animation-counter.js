@@ -19,10 +19,12 @@
           if (check('counter-1') && !mobile[0]) {
             run1();
             mobile[0] = true;
-          } else if (check('counter-2') && !mobile[1]) {
+          }
+          if (check('counter-2') && !mobile[1]) {
             run2();
             mobile[1] = true;
-          } else if (check('counter-3') && !mobile[2]) {
+          }
+          if (check('counter-3') && !mobile[2]) {
             run3();
             mobile[2] = true;
           }
