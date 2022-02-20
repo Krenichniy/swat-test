@@ -1,0 +1,58 @@
+<!-- Бекдроп -->
+<div class="buy-backdrop" data-modal>
+
+    <!-- Модальное окно -->
+    <div class="buy-modal">
+        <!-- Кнопка закрытия модального окна -->
+        <button class="buy-modal__close-btn" data-modal-close>
+            <svg class="buy-modal__close-icon" width="14" height="14">
+                <use href="./images/mob-menu-icons.svg#close-icon"></use>
+            </svg>
+        </button>
+        <!-- Форма -->
+        <form action="#" name="buy-modal__form">
+            <!-- Заголовок формы -->
+            <p class="buy-modal__title section-title">Buy or die</p>
+            <!-- Чекбоксы -->
+            <ul class="buy-modal__list">
+                <li class="buy-modal__item">
+                    <picture>
+                        <source srcset="./images/products-icecream-mob@1x.png 1x, ./images/products-icecream-mob@2x.png 2x" />
+                        <img src="./images/products-icecream-mob@1x.png" alt="Icecream" class="checkbox__img" />
+                    </picture>
+                    <input type="checkbox" id="a" class="visually-hidden" name="check">
+                    <label for="a" class="checkbox">
+                        <div class="checkbox__inner">
+                            <div class="check__ball check__ball--pink"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="buy-modal__item">
+                    <picture>
+                        <source srcset="./images/products-icecoffee-mob@1x.png 1x, ./images/products-icecoffee-mob@2x.png 2x" />
+                        <img src="./images/products-icecoffee-mob@1x.png" alt="Icecoffee" class="checkbox__img" />
+                    </picture>
+                    <input type="checkbox" id="b" class="visually-hidden" name="check">
+                    <label for="b" class="checkbox">
+                        <div class="checkbox__inner">
+                            <div class="check__ball check__ball--orange"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="buy-modal__item">
+                    <picture>
+                        <source srcset="./images/products-iceshakes-mob@1x.png 1x, ./images/products-iceshakes-mob@2x.png 2x" />
+                        <img src="./images/products-iceshakes-mob@1x.png" alt="Iceshakes" class="checkbox__img" />
+                    </picture>
+                    <input type="checkbox" id="c" class="visually-hidden" name="check">
+                    <label for="c" class="checkbox">
+                        <div class="checkbox__inner">
+                            <div class="check__ball check__ball--green"></div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+</div>
