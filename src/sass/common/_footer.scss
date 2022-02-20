@@ -16,14 +16,7 @@
     @include max767 {
       margin-bottom: 43px;
     }
-  
-    // @include min768 {
-    //   width: 700px;
-    // }
-    // @include min1280 {
-    //   width: 472px;
-    // }
-  }
+    }
   .container.down {
       @include min1280 {
         margin-bottom: 97px;
@@ -43,8 +36,7 @@
 .footer__title  {
   @include max767 {
     width: 232px;
-    // padding-left: 22px;
-  }
+     }
   align-items: flex-start;
   color: #FEA5BB;
   font-family: Titan One;
@@ -66,10 +58,8 @@
     font-family: Titan One;
     @include font(34px,400,1.14, 0.04px);
     text-transform: uppercase;
-
     margin-top: 17px;
-    // padding-left: 20px;
-
+    
     @include max767 {
       width: 200px;
     }
@@ -113,13 +103,10 @@
   .footer-social__item:not(:last-child) {
     margin-right: 24px;
   }
-  // @include max767{
-  //   padding-right: 21px;
-  // }
+  
 }
 .footer__contact {
   @include max767{
-    // padding-right: 20px;
     text-align: end;
   }
 }
