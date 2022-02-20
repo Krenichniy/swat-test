@@ -36,7 +36,7 @@
     @include min768 {
       width: 340px;
     }
-    @include min1200 {
+    @include min1280 {
       width: 472px;
     }
   }
@@ -63,7 +63,7 @@ text-transform: uppercase;
 //     padding-top: 158px;
 //     padding-left: 36px;
 // }
-// @include min1200 {
+// @include min1280 {
 //     padding-top: 165px;
 //     padding-left: 114px;
 // }
@@ -84,7 +84,7 @@ text-transform: uppercase;
     margin-top: 16px;
     padding-left: 36px;
 }
-@include min1200 {
+@include min1280 {
     margin-top: 15px;
     padding-left: 114px;
 }
