@@ -99,8 +99,12 @@
   @include min768 {
     margin-bottom: 50px;
   }
+  @include min768-max1279 {
+    margin-left: 150px;
+  }
   .footer-social__item:not(:last-child) {
     margin-right: 24px;
+    
   }
   
 }
