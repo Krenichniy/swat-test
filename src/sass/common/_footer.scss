@@ -41,22 +41,22 @@
   color: #FEA5BB;
   font-family: Titan One;
   text-transform: uppercase;
-  @include font(18px,400,1.16, 0.04px);
+  @include font(18px,400,1.16, null);
 
    
     @include min768 {
       margin-bottom: 15px;
-      @include font(26px,400,1.14, 0.04px);
+      @include font(26px,400,1.14, null);
     }
     @include min1280 {
       width: 100%;
-    @include font(30px,400,1.16, 0.04px);
+    @include font(30px,400,1.16, null);
     }
 }
 .footer__text {
     color: #d41443;
     font-family: Titan One;
-    @include font(34px,400,1.14, 0.04px);
+    @include font(34px,400,1.14, null);
     text-transform: uppercase;
     margin-top: 17px;
     
@@ -69,10 +69,10 @@
     }
     @include min768 {
       margin-bottom: 15px;
-      @include font(48px,400,1.14, 0.04px);
+      @include font(48px,400,1.14, null);
     }
     @include min1280 {
-       @include font(58px,400,1.14, 0.04px);
+       @include font(58px,400,1.14, null);
     }
 }
 
@@ -126,12 +126,12 @@
 .footer__contact--text,
 .footer__link--tel   {
   font-family: DM Sans;
-  @include font(12px,700,1.86, 0.04px);
+  @include font(12px,700,1.86, null);
   @include min768 {
-  @include font(14px,700,1.86, 0.04px);
+  @include font(14px,700,1.86, null);
   }
   @include min1280 {
-  @include font(16px,700,1.86, 0.04px);
+  @include font(16px,700,1.86, null);
   }
 
 }
@@ -149,7 +149,7 @@
 .copyright__title {
 color: #907E82; 
 font-family: DM Sans;
-@include font(14px,700,1.52, 0.04px);
+@include font(14px,700,1.52, null);
 padding-top: 9px;
 text-align: center;
 margin-left: auto;
