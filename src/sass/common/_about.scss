@@ -224,6 +224,7 @@
   border-radius: 22px;
   // padding: 15px 37px;
   padding: 17px 37px 17px 37px;
+  cursor: pointer;
   &:hover,
   &:focus {
     background-color: var(--light-btn-hover);
@@ -244,5 +245,75 @@
   margin-right: 13px;
 
   color: var(--accent-color);
-  cursor: pointer;
+}
+
+// корова звук
+.about__audio {
+  position: absolute;
+
+  width: 100%;
+
+  &-over {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+  }
+
+  &-play {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #fff;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.2s ease;
+    transition-property: opacity, visibility;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 21px;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-width: 12px;
+      border-bottom-width: 12px;
+      border-left-color: #fff;
+      border-right-width: 0;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &.audio-is-playing {
+    #audio {
+      &-over {
+        display: block;
+      }
+
+      &-play {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
 }
