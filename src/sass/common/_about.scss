@@ -133,6 +133,7 @@
   }
 }
 .about__cow-wrapper {
+  cursor: pointer;
   @media screen and (min-width: 320px) and (max-width: 768px) {
     @include flex(flex, center, null);
     margin-top: 26px;
@@ -224,6 +225,7 @@
   border-radius: 22px;
   // padding: 15px 37px;
   padding: 17px 37px 17px 37px;
+  cursor: pointer;
   &:hover,
   &:focus {
     background-color: var(--light-btn-hover);
@@ -244,5 +246,6 @@
   margin-right: 13px;
 
   color: var(--accent-color);
-  cursor: pointer;
 }
+
+// корова звук
