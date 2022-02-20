@@ -141,6 +141,9 @@ text-transform: uppercase;
   .footer-social__item:not(:last-child) {
     margin-right: 24px;
   }
+  @include max767{
+    padding-right: 21px;
+  }
 }
 .footer__contact {
   @include max767{
