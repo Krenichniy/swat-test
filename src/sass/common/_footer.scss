@@ -189,6 +189,11 @@ text-transform: uppercase;
   display: block;
   border-top: 1px solid #E1E1E1;
   text-align: center;
+  @include max767 {
+    width: 150px;
+  }
+
+  
 }
 .copyright__title {
 color: #907E82; 
