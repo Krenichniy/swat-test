@@ -1,82 +1,95 @@
 <header class="header">
-
-    <div class="container header-container">
-
-        <!-- Лого -->
-        <a href="index.html" class="logo">
-            <picture>
-                <source srcset="./images/logo@1x.png 1x, ./images/logo@2x.png 2x">
-                <img src="./images/logo@1x.png" alt="Логотип" class="logo__img" width="199" height="50">
-            </picture>
-        </a>
-        <!-- Навигация -->
-        <nav class="header__desktop-nav">
-            <ul class="header__link-list">
-                <li class="header__item">
-                    <a href="" class="header__link current-link">Home</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">About us</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">How it’s made?</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Our products</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Контейнер кнопок хедера -->
-        <div class="header__btn-container">
-            <!-- Кнопка мобильного меню -->
-            <button class="btn mob-menu__open-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="mob-menu-btn__icon" width="20" height="12">
-                    <use href="./images/mob-menu-icons.svg#burger-icon"></use>
-                </svg>
-            </button>
-            <!-- Кнопка Buy -->
-            <button class="first-btn buy-btn" type="button">
-                <span class="first-btn__start">Buy now</span>
-                <img src="./images/btn-corner.svg" alt="стрелка" width="6" height="10" class="first-btn__finish">
-            </button>
-        </div>
-        <!-- Мобильное меню -->
-        <div class="header__mob-menu js-menu-container">
-            <div class="header__mob-menu-box">
-                <button class="mob-menu__close-btn js-close-menu">
-                    <svg class="mob-menu-btn__icon" width="14" height="14">
-                        <use href="./images/mob-menu-icons.svg#close-icon"></use>
-                    </svg>
-                </button>
-                <button class="first-btn buy-btn-mob" type="button">
-                    <span class="first-btn__start">Buy now</span>
-                    <img src="./images/btn-corner.svg" alt="стрелка" width="6" height="10" class="first-btn__finish">
-                </button>
-                <nav class="header__mob-nav">
-                    <ul class="header__mob-link-list">
-                        <li class="header__mob-item">
-                            <a href="" class="header__mob-link current-link">Home</a>
-                        </li>
-                        <li class="header__mob-item">
-                            <a href="" class="header__mob-link">About us</a>
-                        </li>
-                        <li class="header__mob-item">
-                            <a href="" class="header__mob-link">How it’s made?</a>
-                        </li>
-                        <li class="header__mob-item">
-                            <a href="" class="header__mob-link">Our products</a>
-                        </li>
-                        <li class="header__mob-item">
-                            <a href="" class="header__mob-link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
+  <div class="container header-container">
+    <!-- Лого -->
+    <a href="index.html" class="logo">
+      <picture>
+        <source srcset="./images/logo@1x.png 1x, ./images/logo@2x.png 2x" />
+        <img src="./images/logo@1x.png" alt="Логотип" class="logo__img" width="199" height="50" />
+      </picture>
+    </a>
+    <!-- Навигация -->
+    <nav class="header__desktop-nav">
+      <ul class="header__link-list">
+        <li class="header__item">
+          <a href="" class="header__link current-link">Home</a>
+        </li>
+        <li class="header__item">
+          <a href="#about" class="header__link">About us</a>
+        </li>
+        <li class="header__item">
+          <a href="#about" class="header__link">How it’s made?</a>
+        </li>
+        <li class="header__item">
+          <a href="#products" class="header__link">Our products</a>
+        </li>
+        <li class="header__item">
+          <a href="" class="header__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Контейнер кнопок хедера -->
+    <div class="header__btn-container">
+      <!-- Кнопка мобильного меню -->
+      <button
+        class="btn mob-menu__open-btn js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="mob-menu-btn__icon" width="20" height="12">
+          <use href="./images/mob-menu-icons.svg#burger-icon"></use>
+        </svg>
+      </button>
+      <!-- Кнопка Buy -->
+      <button class="first-btn buy-btn" type="button">
+        <span class="first-btn__start">Buy now</span>
+        <img
+          src="./images/btn-corner.svg"
+          alt="стрелка"
+          width="6"
+          height="10"
+          class="first-btn__finish"
+        />
+      </button>
     </div>
-
+    <!-- Мобильное меню -->
+    <div class="header__mob-menu js-menu-container">
+      <div class="header__mob-menu-box">
+        <button class="mob-menu__close-btn js-close-menu">
+          <svg class="mob-menu-btn__icon" width="14" height="14">
+            <use href="./images/mob-menu-icons.svg#close-icon"></use>
+          </svg>
+        </button>
+        <button class="first-btn buy-btn-mob" type="button">
+          <span class="first-btn__start">Buy now</span>
+          <img
+            src="./images/btn-corner.svg"
+            alt="стрелка"
+            width="6"
+            height="10"
+            class="first-btn__finish"
+          />
+        </button>
+        <nav class="header__mob-nav">
+          <ul class="header__mob-link-list">
+            <li class="header__mob-item">
+              <a href="" class="header__mob-link current-link">Home</a>
+            </li>
+            <li class="header__mob-item">
+              <a href="" class="header__mob-link">About us</a>
+            </li>
+            <li class="header__mob-item">
+              <a href="" class="header__mob-link">How it’s made?</a>
+            </li>
+            <li class="header__mob-item">
+              <a href="" class="header__mob-link">Our products</a>
+            </li>
+            <li class="header__mob-item">
+              <a href="" class="header__mob-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
