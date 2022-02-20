@@ -1,36 +1,68 @@
 <section class="about" id="about">
- 
-    <div class="container about__container">
+  <div class="container about__container">
     <div class="icecream">
-        <div class="flavor">
-            <div class="flavours"></div>
-        </div>
-        <div class="stick"></div>
+      <div class="flavor">
+        <div class="flavours"></div>
+      </div>
+      <div class="stick"></div>
     </div>
-    
 
-<p class="about__pre-title section-title ">tradition and love</p>
-<h2 class="about__title section-title ">how it’s made?</h2>
-<div class="about__wrapper-content">
-<div class="about__cow-wrapper">
-<picture class="about__cow">
-    <source media ="(min-width:1200px)" srcset="./images/cow-desktop@1x.png 1x,./images/cow-desktop@2x.png 2x">  
-<source media ="(min-width:768px)" srcset="./images/cow-tab@1x.png 1x,./images/cow-tab@2x.png 2x"> 
-<source media ="(min-width:320px)" srcset="./images/cow-mob@1x.png 1x,./images/cow-mob@2x.png 2x"> 
-    <img src="./images/cow-desktop@1x.png" alt="cow" width ="280" height="280"  class="about__cow"/>
-</picture></div>
-<div class="about__text-wrapper">
-<p class="about__description">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
-Maecenas eleifend erat at justo fringilla.</p>
-<p class="about__text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
-Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
-<p class="about__text--secondary">
-Aliquam erat volutpat. Aenean accumsan.
-</p>
-<button type="button" class="about__button"><span class="about__button--text">Read more</span><svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="m1 1 4 4-4 4" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-</svg></button></div></div>
+    <p class="about__pre-title section-title">tradition and love</p>
+    <h2 class="about__title section-title">how it’s made?</h2>
+    <div class="about__wrapper-content">
+      <div class="about__cow-wrapper">
+        <div id="cow">
+          <picture class="about__cow">
+            <source
+              media="(min-width:1200px)"
+              srcset="./images/cow-desktop@1x.png 1x, ./images/cow-desktop@2x.png 2x"
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="./images/cow-tab@1x.png 1x, ./images/cow-tab@2x.png 2x"
+            />
+            <source
+              media="(min-width:320px)"
+              srcset="./images/cow-mob@1x.png 1x, ./images/cow-mob@2x.png 2x"
+            />
+            <img
+              src="./images/cow-desktop@1x.png"
+              alt="cow"
+              width="280"
+              height="280"
+              class="about__cow"
+            />
+          </picture>
+        </div>
 
-</div>
-   
+        <audio id="cowAudio">
+          <source src="./cow-sound.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="about__text-wrapper">
+        <p class="about__description">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+        </p>
+        <p class="about__text">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
+          in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
+          maximus. Cras massa nibh, tincidunt.
+        </p>
+        <p class="about__text--secondary">Aliquam erat volutpat. Aenean accumsan.</p>
+        <button how-read-more-modal-open type="button" class="about__button">
+          <span class="about__button--text">Read more</span
+          ><svg width="6" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m1 1 4 4-4 4"
+              stroke="#D41443"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
