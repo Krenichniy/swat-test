@@ -338,11 +338,11 @@
   height: 15px;
   display: inline-block;
   margin-right: 8px;
-  border: 2px solid var(--header-title-color);
+  border: 2px solid var(--dark-btn-hover);
   border-radius: 2px;
   .franchise-checkbox__input:checked + & {
     background-color: #d41342;
-    background-image: url(../images/icon-check.svg);
+    background-image: url(../../images/mob-menu-icons.svg#icon-check);
     background-size: contain;
     background-origin: border-box;
     border: #d41342;
@@ -362,9 +362,9 @@
   letter-spacing: 0.03em;
   text-decoration-skip-ink: none;
 
-  color: var(--first-text-color);
+  color: var(--accent-text-color);
   &:focus {
-    background-color: var(--accent-text-color);
+    background-color: var(--dark-btn-hover);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
