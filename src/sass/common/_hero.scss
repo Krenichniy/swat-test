@@ -58,26 +58,26 @@
 .top-box__title {
   width: 218px;
   margin-bottom: 19px;
-  @include font(26px, 400, (30 / 26), 0.04em);
+  @include font(26px, 400, (30 / 26), null);
   color: var(--main-white-color);
   @include min768 {
     width: 162px;
     margin-bottom: 20px;
-    @include font(22px, 400, (25 / 22), 0.04em);
+    @include font(22px, 400, (25 / 22), null);
   }
   @include min1280 {
     width: 277px;
     margin-bottom: 25px;
-    @include font(38px, 400, (44 / 38), 0.04em);
+    @include font(38px, 400, (44 / 38), null);
   }
   & > span {
-    @include font(46px, 400, (46 / 48), 0.04em);
+    @include font(46px, 400, (46 / 48), null);
     color: var(--accent-color);
     @include min768 {
-      @include font(34px, 400, (31 / 34), 0.04em);
+      @include font(34px, 400, (31 / 34), null);
     }
     @include min1280 {
-      @include font(58px, 400, (52 / 58), 0.04em);
+      @include font(58px, 400, (52 / 58), null);
     }
   }
 }
@@ -170,10 +170,10 @@
   z-index: 1;
   color: var(--accent-color);
   @include min768 {
-    @include font(28px, 400, (32 / 28), 0.04em);
+    @include font(28px, 400, (32 / 28), null);
   }
   @include min1280 {
-    @include font(46px, 400, (53 / 46), 0.04em);
+    @include font(46px, 400, (53 / 46), null);
     margin-bottom: 2px;
   }
 }
@@ -183,10 +183,10 @@
   z-index: 1;
   color: var(--main-white-color);
   @include min768 {
-    @include font(8px, 400, (10 / 8), 0.04em);
+    @include font(8px, 400, (10 / 8), null);
   }
   @include min1280 {
-    @include font(14px, 400, (18 / 14), 0.04em);
+    @include font(14px, 400, (18 / 14), null);
   }
 }
 
@@ -205,10 +205,10 @@
 
 .bottom-box__txt {
   color: var(--main-white-color);
-  @include font(8px, 400, (18 / 12), 0.04em);
+  @include font(8px, 400, (18 / 12), null);
   margin-bottom: 7px;
   @include min1280 {
-    @include font(14px, 400, (28 / 20), 0.04em);
+    @include font(14px, 400, (28 / 20), null);
     margin-bottom: 20px;
   }
 }
