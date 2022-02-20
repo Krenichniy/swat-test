@@ -78,7 +78,7 @@
 
 
 .footer__icon {
-    fill: #ffffff;
+    fill: var(--main-white-color);
     background-color: #FEA5BB;
     border-radius: 50%;
     transition: fill 250ms linear, background-color 250ms linear;
@@ -88,15 +88,14 @@
   border-radius: 50%;
   &:hover .footer__icon,
   &:focus .footer__icon {
-    fill: #ffffff;
-    background-color: #d41443;
+    fill: var(--main-white-color);
+    background-color: var(--accent-color);
   }
 }
 
 .footer-social__list {
   margin-bottom: 46px;
-  display: flex;  
-  justify-content: flex-end;
+  @include flex (flex, flex-end, null);
   @include min768 {
     margin-bottom: 50px;
   }
