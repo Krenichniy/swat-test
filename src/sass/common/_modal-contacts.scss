@@ -8,11 +8,11 @@
   background-color: rgba(255, 248, 220, 0.4);
 }
 
-//.modal-is-hidden {
-// visibility: hidden;
-//  opacity: 0;
-// pointer-events: none;
-//}
+.modal-is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 
 .location-map {
   position: absolute;
@@ -35,10 +35,12 @@
     width: 450px;
   }
   @include min768 {
-    width: 680px;
+    width: 85vw;
+    height: 85vh;
   }
   @include min1280 {
-    width: 1000px;
+    width: 85vw;
+    height: 85vh;
   }
 }
 .location-form {
@@ -88,9 +90,11 @@
   color: #d41443;
   @include min768 {
     font-size: 25px;
+    margin-bottom: 25px;
   }
   @include min1280 {
-    font-size: 25px;
+    font-size: 35px;
+    margin-bottom: 30px;
   }
 }
 
@@ -105,18 +109,19 @@
   background-color: rgba(255, 248, 220, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &.modal-is-hidden .franchise-modal {
+  &.modal-is-hidden .contacts-franchise-modal {
     transform: scale(2) translate(0);
   }
 }
+
 .franchise-modal {
   position: absolute;
   display: block;
   width: 90vw;
-  height: 70vh;
+  height: 90vh;
   top: 50%;
   left: 50%;
-  padding: 40px 40px;
+  padding: 20px 20px;
 
   background: linear-gradient(to right, #ee9ca7, #ffdde1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -126,93 +131,18 @@
   transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms;
   @include min480 {
-    width: 90vh;
-    height: 70vh;
+    width: 440px;
+    height: 90vh;
   }
   @include min768 {
-    width: 90vh;
+    width: 700px;
+    height: 90vh;
+  }
+  @include min1280 {
+    width: 1000px;
     height: 90vh;
   }
 }
-.franchise-list {
-  display: none;
-  @include min768 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -20px;
-  }
-}
-.franchise-title {
-  display: none;
-
-  @include min768 {
-    display: block;
-    flex-wrap: wrap;
-    margin-left: -20px;
-
-    font-family: Titan One;
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.12;
-    letter-spacing: 0.06em;
-    text-align: center;
-    text-transform: uppercase;
-    color: #d41443;
-  }
-}
-.franchise-list__item {
-  margin-bottom: 15px;
-  margin-left: 20px;
-
-  box-sizing: border-box;
-  transform: scale(1, 1);
-  &:hover,
-  &:focus {
-    transform: scale(1.2, 1.2);
-
-    .franchise-list__item:nth-last-child(-n + 1) {
-      margin-bottom: 0;
-    }
-
-    .franchise-list__item + .franchise-list__item {
-      margin-left: 30px;
-    }
-    .franchise-list__item:nth-child(2n + 1) {
-      margin-left: 0;
-    }
-  }
-
-  @include min768 {
-    max-width: 700px;
-    width: calc(100% / 5 - 20px);
-    margin-left: 20px;
-    .franchise-list__item:nth-last-child(-n + 5) {
-      margin-bottom: 0;
-    }
-
-    .franchise-list__item + .franchise-list__item {
-      margin-left: 20px;
-    }
-    .franchise-list__item:nth-child(5n + 1) {
-      margin-left: 0;
-    }
-  }
-  @include min1280 {
-    width: calc(100% / 5 - 20px);
-    margin-left: 20px;
-    .franchise-list__item:nth-last-child(-n + 5) {
-      margin-bottom: 0;
-    }
-
-    .franchise-list__item + .franchise-list__item {
-      margin-left: 20px;
-    }
-    .franchise-list__item:nth-child(5n + 1) {
-      margin-left: 0;
-    }
-  }
-}
-
 .contacts-franchise-modal-close {
   position: absolute;
   top: 10px;
@@ -237,6 +167,75 @@
     fill: #fff;
   }
 }
+.franchise-title {
+  display: none;
+
+  @include min768 {
+    display: block;
+    flex-wrap: wrap;
+
+    font-family: Titan One;
+    margin-bottom: 15px;
+    font-size: 35px;
+    line-height: 1.12;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #d41443;
+  }
+}
+.franchise-list {
+  display: none;
+  @include min768 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -20px;
+  }
+}
+
+.franchise-list__item {
+  margin-bottom: 15px;
+  margin-left: 20px;
+
+  box-sizing: border-box;
+  transform: scale(1, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.4, 1.4);
+  }
+  @include min768 {
+    width: calc(100% / 5 - 20px);
+    margin-left: 20px;
+    .franchise-list__item:nth-last-child(-n + 5) {
+      margin-bottom: 0;
+    }
+
+    .franchise-list__item + .franchise-list__item {
+      margin-left: 20px;
+    }
+    .franchise-list__item:nth-child(5n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.franchise-form__title {
+  display: block;
+  font-family: Titan One;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 25px;
+  line-height: 1.12;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #d41443;
+  @include min768 {
+    margin-bottom: 15px;
+    font-size: 35px;
+  }
+}
 
 .franchise-form__field {
   input {
@@ -252,9 +251,21 @@
     border-radius: 4px;
 
     background-color: transparent;
+    @include min480 {
+      width: 350px;
+    }
+    @include min768 {
+      width: 604px;
+    }
+    @include min1280 {
+      width: 904px;
+    }
   }
 }
-
+.franchise-form__field {
+  display: flex;
+  flex-direction: column;
+}
 .franchise-form__lable {
   margin-bottom: 7px;
 
@@ -265,15 +276,16 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #d41342;
+  @include min768 {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
 }
 .franchise-form__align-icon {
   position: relative;
   margin-bottom: 30px;
   @include min768 {
-    margin-bottom: 15px;
-  }
-  @include min1280 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 .franchise-form__icon {
@@ -342,7 +354,7 @@
   border-radius: 2px;
   .franchise-checkbox__input:checked + & {
     background-color: #d41342;
-    background-image: url(../../images/mob-menu-icons.svg#icon-check);
+    background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
     border: #d41342;
@@ -353,7 +365,7 @@
 .franchise-checkbox {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
   font-style: normal;
   font-weight: normal;
@@ -365,7 +377,7 @@
   color: var(--accent-text-color);
   &:focus {
     background-color: var(--dark-btn-hover);
-    background-image: url(../images/icon-check.svg);
+
     background-size: contain;
     background-origin: border-box;
     border: var(--accent-text-color);
