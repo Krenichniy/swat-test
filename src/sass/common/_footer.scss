@@ -42,15 +42,24 @@
   }
 
 .footer__title  {
+  @include max767 {
+    width: 232px;
+  }
+  align-items: flex-start;
 color: #FEA5BB;
 font-family: Titan One;
 text-transform: uppercase;
-@include font(18px,normal,1.14, 0.04px);
+@include font(18px,400,1.16, 0.04px);
 
-    @include max767 {
-      width: 232px;
+   
+    @include min768 {
+      margin-bottom: 15px;
+      @include font(26px,400,1.14, 0.04px);
     }
-    align-items: flex-start;
+    @include min1280 {
+      width: 100%;
+      @include font(30px,400,1.16, 0.04px);
+    }
 // font-style: normal;
 // font-weight: normal;
 // font-size: 18px;
@@ -71,23 +80,34 @@ text-transform: uppercase;
 .footer__text {
     color: #d41443;
     font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 39px;
-    letter-spacing: 0.04em;
+    @include font(34px,400,1.14, 0.04px);
     text-transform: uppercase;
 
     margin-top: 17px;
     padding-left: 20px;
-    @include min768-max1279 {
-    margin-top: 16px;
-    padding-left: 36px;
-}
-@include min1280 {
-    margin-top: 15px;
-    padding-left: 114px;
-}
+
+    @include max767 {
+      width: 200px;
+    }
+    align-items: flex-start;
+    @include max1279 {
+      margin-top: 17px;
+    }
+    @include min768 {
+      margin-bottom: 15px;
+      @include font(48px,400,1.14, 0.04px);
+    }
+    @include min1280 {
+       @include font(58px,400,1.14, 0.04px);
+    }
+//     @include min768-max1279 {
+//     margin-top: 16px;
+//     padding-left: 36px;
+// }
+// @include min1280 {
+//     margin-top: 15px;
+//     padding-left: 114px;
+// }
 }
 
 
@@ -95,62 +115,104 @@ text-transform: uppercase;
     fill: #ffffff;
     background-color: #FEA5BB;
     border-radius: 50%;
+    transition: fill 250ms linear, background-color 250ms linear;
 
-    & :focus,
-    & :hover {
-        background-color: #d41443;
-    }
+    // & :focus,
+    // & :hover {
+    //     background-color: #d41443;
+    // }
+}
+.footer-social__link {
+  border-radius: 50%;
+  &:hover .footer__icon,
+  &:focus .footer__icon {
+    fill: #ffffff;
+    background-color: #d41443;
+  }
+}
+
+.footer-social__list {
+  margin-bottom: 46px;
+  display: flex;  
+  justify-content: flex-end;
+  @include min768 {
+    margin-bottom: 50px;
+  }
+  .footer-social__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+.footer__contact {
+  @include max767{
+    text-align: end;
+  }
 }
 
 .footer__contact--text,
 .footer__link--tel   {
-font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 22px;
+  font-family: DM Sans;
+  @include font(12px,700,1.86, 0.04px);
+  @include min768 {
+  @include font(14px,700,1.86, 0.04px);
+  }
+  @include min1280 {
+  @include font(16px,700,1.86, 0.04px);
+  }
+
 }
-
-.footer-social__link {
-font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 30px;
-letter-spacing: 0.02em;
-  
-}
-
-
-.footer__contact--text
-{
+.footer__contact--text {
     color: #000000;
 }
-
 .footer__link--tel {
-     color: #d41443;
+    color: #d41443;
+    }
 
-}
-.footer-social__list,
+// font-style: normal;
+// font-weight: bold;
+// font-size: 12px;
+// line-height: 22px;
+
+
+// .footer-social__link {
+// font-family: DM Sans;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 16px;
+// line-height: 30px;
+// letter-spacing: 0.02em;
+ // }
+
 .copyright {
-
-    @include max767 {
-    text-align: right;
-}
-}
-
-.copyright
-{   display: block;
-    border-top: 1px solid #E1E1E1;
-    text-align: center;
+  display: block;
+  border-top: 1px solid #E1E1E1;
+  text-align: center;
 }
 .copyright__title {
 color: #907E82; 
 font-family: DM Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: calc(21 / 14);
+@include font(14px,700,1.52, 0.04px);
+padding-top: 9px;
+border-top: 1px solid #e1e1e1;
 text-align: center;
+margin-left: auto;
+margin-right: auto;
+@include min768px {
+  width: 100%;
 }
+
+// font-style: normal;
+// font-weight: bold;
+// font-size: 14px;
+// line-height: calc(21 / 14);
+// text-align: center;
+}
+
+// .footer-social__list,
+// .copyright {
+
+//     @include max767 {
+//     text-align: right;
+// }
+// }
+
 
