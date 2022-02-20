@@ -47,6 +47,7 @@
     @include min768 {
       margin-bottom: 15px;
       @include font(26px,400,1.14, null);
+      width: 340px;
     }
     @include min1280 {
       width: 100%;
@@ -101,6 +102,10 @@
   }
   @include min768-max1279 {
     margin-left: 150px;
+  }
+
+  @include min1280 {
+    margin-left: 189px;
   }
   .footer-social__item:not(:last-child) {
     margin-right: 24px;
