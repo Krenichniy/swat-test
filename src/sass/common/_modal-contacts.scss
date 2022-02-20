@@ -1,13 +1,14 @@
 .location-modal,
-.franchise-modal {
+.franchise {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(255, 248, 220, 0.5);
+  background-color: rgba(255, 248, 220, 0.8);
 }
+
 //.is-hidden {
 //   visibility: hidden;
 //   opacity: 0;
@@ -23,7 +24,7 @@
   left: 50%;
   padding: 10px 10px;
 
-  background-color: rgba(255, 20, 147, 0.2);
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -37,12 +38,11 @@
   @include min768 {
     width: 680px;
   }
-  @include min1200 {
+  @include min1280 {
     width: 1000px;
   }
 }
-.location-form,
-.franchise-form {
+.location-form {
   margin: 0 auto;
   padding-left: 5px;
   padding-right: 5px;
@@ -53,6 +53,7 @@
     padding: 5px 5px;
   }
 }
+
 .location-modal__close-btn,
 .franchise-form__close-btn {
   position: absolute;
@@ -76,7 +77,8 @@
   }
 }
 
-.contacts-location__title,
+.location-form__title,
+.franchise-title,
 .franchise-form__title {
   display: block;
   margin-bottom: 10px;
@@ -90,7 +92,260 @@
   @include min768 {
     font-size: 25px;
   }
-  @include min1200 {
+  @include min1280 {
     font-size: 25px;
+  }
+}
+
+// Стилі Franchise
+.franchise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(255, 248, 220, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden .franchise-modal {
+    transform: scale(2) translate(0);
+  }
+}
+.franchise-modal {
+  position: absolute;
+  width: 90vw;
+  height: 95vh;
+  top: 50%;
+  left: 50%;
+  padding: 40px 40px;
+
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms;
+  @include min480 {
+    width: 90vh;
+  }
+  @include min768 {
+    width: 80vh;
+  }
+  @include min1280 {
+    width: 80vh;
+  }
+}
+.franchise-list {
+  @include min768 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+.franchise-brands {
+  display: none;
+  @include min768 {
+    display: inline-block;
+  }
+}
+.franchise-list__item {
+  margin-bottom: 30px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  transform: scale(1, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.2, 1.2);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+
+    .franchise-list__item:nth-last-child(-n + 1) {
+      margin-bottom: 0;
+    }
+
+    .franchise-list__item + .franchise-list__item {
+      margin-left: 30px;
+    }
+    .franchise-list__item:nth-child(2n + 1) {
+      margin-left: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 5 - 20px);
+    margin-left: 20px;
+    .franchise-list__item:nth-last-child(-n + 5) {
+      margin-bottom: 0;
+    }
+
+    .franchise-list__item + .franchise-list__item {
+      margin-left: 20px;
+    }
+    .franchise-list__item:nth-child(5n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.franchise-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 3px 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 20, 147, 0.2);
+  border: 1px solid rgba(245, 129, 200, 0.637);
+  border-radius: 50%;
+  fill: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+    border: 1px solid rgba(245, 129, 200, 0.637);
+    border-radius: 50%;
+    fill: #fff;
+  }
+}
+
+.franchise-form__field {
+  input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    padding-right: 12px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    outline: none;
+
+    border: 1px solid #d41342;
+    border-radius: 4px;
+
+    background-color: transparent;
+  }
+}
+
+.franchise-form__lable {
+  margin-bottom: 7px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #d41342;
+}
+.franchise-form__align-icon {
+  position: relative;
+  margin-bottom: 10px;
+}
+.franchise-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #fff;
+  .franchise-form__input:focus ~ & {
+    fill: #d41342;
+  }
+}
+.franchise-form__input {
+  &:focus {
+    border: 1px solid #d41342;
+  }
+}
+.franchise-form__button {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #d41342;
+
+  background-color: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(245, 129, 200, 0.637);
+  box-shadow: 0px 4px 4px rgb(219, 63, 136);
+  border-color: inherit;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: #d41342;
+    color: #fff;
+  }
+}
+.franchise-checkbox__input {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.franchise-checkbox__icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 8px;
+  border: 2px solid var(--header-title-color);
+  border-radius: 2px;
+  .franchise-checkbox__input:checked + & {
+    background-color: #d41342;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: #d41342;
+    border-radius: 2px;
+  }
+}
+
+.franchise-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-decoration-skip-ink: none;
+
+  color: #d41342;
+  &:focus {
+    background-color: #d41342;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: #d41342;
+    border-radius: 2px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
   }
 }
