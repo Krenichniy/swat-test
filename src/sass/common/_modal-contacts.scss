@@ -1,19 +1,18 @@
-.location-modal,
-.franchise {
+.contacts-location-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(255, 248, 220, 0.8);
+  background-color: rgba(255, 248, 220, 0.4);
 }
 
-//.is-hidden {
-//   visibility: hidden;
-//   opacity: 0;
-//    pointer-events: none;
-// }
+//.modal-is-hidden {
+// visibility: hidden;
+//  opacity: 0;
+// pointer-events: none;
+//}
 
 .location-map {
   position: absolute;
@@ -54,8 +53,8 @@
   }
 }
 
-.location-modal__close-btn,
-.franchise-form__close-btn {
+.contacts-location-modal-close,
+.contacts-franchise-modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -77,9 +76,7 @@
   }
 }
 
-.location-form__title,
-.franchise-title,
-.franchise-form__title {
+.location-form__title {
   display: block;
   margin-bottom: 10px;
   font-family: Titan One;
@@ -98,7 +95,7 @@
 }
 
 // Стилі Franchise
-.franchise {
+.contacts-franchise-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -108,14 +105,15 @@
   background-color: rgba(255, 248, 220, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &.is-hidden .franchise-modal {
+  &.modal-is-hidden .franchise-modal {
     transform: scale(2) translate(0);
   }
 }
 .franchise-modal {
   position: absolute;
+  display: block;
   width: 90vw;
-  height: 95vh;
+  height: 70vh;
   top: 50%;
   left: 50%;
   padding: 40px 40px;
@@ -129,40 +127,48 @@
   transition: transform 250ms;
   @include min480 {
     width: 90vh;
+    height: 70vh;
   }
   @include min768 {
-    width: 80vh;
-  }
-  @include min1280 {
-    width: 80vh;
+    width: 90vh;
+    height: 90vh;
   }
 }
 .franchise-list {
+  display: none;
   @include min768 {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
+    margin-left: -20px;
   }
 }
-.franchise-brands {
+.franchise-title {
   display: none;
+
   @include min768 {
-    display: inline-block;
+    display: block;
+    flex-wrap: wrap;
+    margin-left: -20px;
+
+    font-family: Titan One;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.12;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #d41443;
   }
 }
 .franchise-list__item {
-  margin-bottom: 30px;
-  max-width: 1000px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+
   box-sizing: border-box;
   transform: scale(1, 1);
   &:hover,
   &:focus {
     transform: scale(1.2, 1.2);
-  }
-
-  @media screen and (min-width: 768px) {
-    width: calc(100% / 2 - 30px);
-    margin-left: 30px;
 
     .franchise-list__item:nth-last-child(-n + 1) {
       margin-bottom: 0;
@@ -175,7 +181,23 @@
       margin-left: 0;
     }
   }
-  @media screen and (min-width: 1200px) {
+
+  @include min768 {
+    max-width: 700px;
+    width: calc(100% / 5 - 20px);
+    margin-left: 20px;
+    .franchise-list__item:nth-last-child(-n + 5) {
+      margin-bottom: 0;
+    }
+
+    .franchise-list__item + .franchise-list__item {
+      margin-left: 20px;
+    }
+    .franchise-list__item:nth-child(5n + 1) {
+      margin-left: 0;
+    }
+  }
+  @include min1280 {
     width: calc(100% / 5 - 20px);
     margin-left: 20px;
     .franchise-list__item:nth-last-child(-n + 5) {
@@ -191,7 +213,7 @@
   }
 }
 
-.franchise-modal__close {
+.contacts-franchise-modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -246,7 +268,13 @@
 }
 .franchise-form__align-icon {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  @include min768 {
+    margin-bottom: 15px;
+  }
+  @include min1280 {
+    margin-bottom: 20px;
+  }
 }
 .franchise-form__icon {
   position: absolute;
@@ -334,16 +362,16 @@
   letter-spacing: 0.03em;
   text-decoration-skip-ink: none;
 
-  color: #d41342;
+  color: var(--first-text-color);
   &:focus {
-    background-color: #d41342;
+    background-color: var(--accent-text-color);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
-    border: #d41342;
+    border: var(--accent-text-color);
     border-radius: 2px;
   }
-  @media screen and (min-width: 1200px) {
+  @include min768 {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
