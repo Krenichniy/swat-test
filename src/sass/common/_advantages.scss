@@ -107,7 +107,7 @@
 
   &__title {
     font-family: Titan One;
-    @include font(36px, normal, calc(41 / 36), inherit);
+    @include font(36px, 400, calc(41 / 36), inherit);
     text-transform: uppercase;
 
     color: var(--accent-color);
@@ -115,18 +115,16 @@
     margin-bottom: 16px;
 
     @include min768 {
-      font-size: 48px;
-      line-height: 55px;
+      @include font(48px, 400, calc(55 / 48), inherit);
     }
     @include min1280 {
-      font-size: 58px;
-      line-height: 66px;
+      @include font(58px, 400, calc(66 / 58), inherit);
     }
   }
 
   &__text {
     font-family: DM Sans;
-    @include font(12px, bold, 170%, inherit);
+    @include font(12px, 700, 170%, inherit);
 
     color: var(--main-text-color);
 
