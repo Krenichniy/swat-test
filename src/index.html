@@ -72,6 +72,14 @@
       });
     </script>
     <script src="./js/animation-counter.js"></script>
+    <script>
+      var cow = document.getElementById('cow'),
+        cowAudio = document.getElementById('cowAudio');
+      cow.addEventListener('click', fPlay, false);
+      function fPlay() {
+        cowAudio.play();
+      }
+    </script>
     <script src="./index.js"></script>
   </body>
 </html>
