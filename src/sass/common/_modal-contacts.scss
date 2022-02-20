@@ -8,11 +8,11 @@
   background-color: rgba(255, 248, 220, 0.4);
 }
 
-.modal-is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
+//.modal-is-hidden {
+// visibility: hidden;
+// opacity: 0;
+// pointer-events: none;
+//}
 
 .location-map {
   position: absolute;
@@ -64,11 +64,9 @@
   height: 25px;
   padding: 3px 3px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 20, 147, 0.2);
-  border: 1px solid rgba(245, 129, 200, 0.637);
+  @include flex(flex, center, center);
+  background-color: var(--dark-btn-hover);
+  border: 1px solid var(--accent-color);
   border-radius: 50%;
   fill: #fff;
 
@@ -82,9 +80,7 @@
   display: block;
   margin-bottom: 10px;
   font-family: Titan One;
-  font-size: 14px;
-  line-height: 1.12;
-  letter-spacing: 0.06em;
+  @include font(14px, 400, 1.12, 0.06em);
   text-align: center;
   text-transform: uppercase;
   color: #d41443;
@@ -123,10 +119,7 @@
   left: 50%;
   padding: 20px 20px;
 
-  background: linear-gradient(to right, #ee9ca7, #ffdde1);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  background: #ffdde1;
 
   transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms;
@@ -137,12 +130,24 @@
   @include min768 {
     width: 700px;
     height: 90vh;
+    animation: background 5000ms linear 2s infinite alternate;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    @keyframes background {
+      50% {
+        background: #ee9ca7;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+          0px 2px 1px rgba(0, 0, 0, 0.2);
+      }
+    }
   }
   @include min1280 {
     width: 1000px;
-    height: 90vh;
+    height: 80vh;
   }
 }
+
 .contacts-franchise-modal-close {
   position: absolute;
   top: 10px;
@@ -151,9 +156,7 @@
   height: 25px;
   padding: 3px 3px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex, center, center);
   background-color: rgba(255, 20, 147, 0.2);
   border: 1px solid rgba(245, 129, 200, 0.637);
   border-radius: 50%;
@@ -176,9 +179,7 @@
 
     font-family: Titan One;
     margin-bottom: 15px;
-    font-size: 35px;
-    line-height: 1.12;
-    letter-spacing: 0.06em;
+    @include font(35px, 400, 1.12, 0.06em);
     text-align: center;
     text-transform: uppercase;
     color: #d41443;
@@ -187,9 +188,8 @@
 .franchise-list {
   display: none;
   @include min768 {
-    display: flex;
+    @include flex(flex, start, center);
     flex-wrap: wrap;
-    align-items: center;
     margin-left: -20px;
   }
 }
@@ -203,6 +203,7 @@
   &:hover,
   &:focus {
     transform: scale(1.4, 1.4);
+    transition: transform 250ms;
   }
   @include min768 {
     width: calc(100% / 5 - 20px);
@@ -225,9 +226,7 @@
   font-family: Titan One;
   margin-bottom: 25px;
   margin-top: 20px;
-  font-size: 25px;
-  line-height: 1.12;
-  letter-spacing: 0.06em;
+  @include font(25px, 400, 1.12, 0.06em);
   text-align: center;
   text-transform: uppercase;
   color: #d41443;
@@ -263,19 +262,14 @@
   }
 }
 .franchise-form__field {
-  display: flex;
+  @include flex(flex, start, left);
   flex-direction: column;
 }
 .franchise-form__lable {
   margin-bottom: 7px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
   color: #d41342;
+  @include font(12px, 400, 1.17, 0.01em);
   @include min768 {
     margin-bottom: 15px;
     font-size: 14px;
@@ -284,6 +278,7 @@
 .franchise-form__align-icon {
   position: relative;
   margin-bottom: 30px;
+
   @include min768 {
     margin-bottom: 10px;
   }
@@ -306,31 +301,27 @@
 .franchise-form__button {
   display: block;
   width: 150px;
-  height: 30px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
 
   font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
+  @include font(16px, bold, 1.87, 0.06em);
   text-align: center;
-  letter-spacing: 0.06em;
-
   color: #d41342;
 
-  background-color: #fff;
+  background-color: var(--main-white-color);
   border-radius: 22px;
-  border: 1px solid rgba(245, 129, 200, 0.637);
-  box-shadow: 0px 4px 4px rgb(219, 63, 136);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0px 4px 4px var(--dark-btn-hover);
   border-color: inherit;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:focus,
   &:hover {
-    background-color: #d41342;
-    color: #fff;
+    background-color: var(--dark-btn-hover);
+    color: var(--main-white-color);
   }
 }
 .franchise-checkbox__input {
@@ -353,27 +344,28 @@
   border: 2px solid var(--dark-btn-hover);
   border-radius: 2px;
   .franchise-checkbox__input:checked + & {
-    background-color: #d41342;
+    background-color: var(--dark-btn-hover);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
-    border: #d41342;
+    border: var(--dark-btn-hover);
     border-radius: 2px;
   }
 }
-
+.franchise-checkbox__text {
+  @include font(16px, 400, 1.16, 0.03em);
+  font-family: sans-serif;
+  color: var(--dark-btn-hover);
+  @include min768 {
+    color: var(--main-white-color);
+  }
+}
 .franchise-checkbox {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  @include flex(flex, start, center);
+  margin-bottom: 20px;
 
   font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
   text-decoration-skip-ink: none;
-
   color: var(--accent-text-color);
   &:focus {
     background-color: var(--dark-btn-hover);
@@ -384,8 +376,6 @@
     border-radius: 2px;
   }
   @include min768 {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(14px, 400, 1.71, 0.03);
   }
 }
