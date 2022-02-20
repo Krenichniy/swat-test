@@ -148,6 +148,7 @@ text-transform: uppercase;
 }
 .footer__contact {
   @include max767{
+    padding-right: 20px;
     text-align: end;
   }
 }
