@@ -3,7 +3,10 @@
   background: linear-gradient(180deg, #fff 170px, #fff5f6 0);
   @include min768 {
     padding-top: 119px;
-    background: linear-gradient(180deg, #fff 196px, #fff5f6 0);
+    background: url(../images/contacts-bg-desktop@1x.png) no-repeat 50% 50%,
+      linear-gradient(180deg, #fff 196px, #fff5f6 0);
+    background-size: contain;
+    // background-position-y: 80%;
   }
   @include min1280 {
     padding-top: 132px;
@@ -11,38 +14,40 @@
       linear-gradient(180deg, #fff 233px, #fff5f6 0);
   }
 }
-
-.contacts__list {
+.contacts__card-wrap {
   margin-bottom: 54px;
   @include min768 {
-    @include flex(flex, null, null);
     margin-bottom: 81px;
   }
   @include min1280 {
     margin-bottom: 86px;
   }
 }
+
+.contacts__list {
+  @include min768 {
+    @include flex(flex, null, null);
+    flex-wrap: wrap;
+    margin-top: -20px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: -20px;
+  }
+}
 .contacts__item {
   width: 100%;
   padding: 43px 20px;
+  margin-top: 20px;
   background: var(--main-white-color);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   @include min768 {
+    width: calc(100% / 3 - 20px);
     padding: 50px 32px;
+    margin-left: 20px;
   }
   @include min1280 {
     padding: 52px 44px 62px;
-  }
-  &:not(:last-child) {
-    margin-bottom: 20px;
-    @include min768 {
-      margin-bottom: 0px;
-      margin-right: 20px;
-    }
-    @include min1280 {
-      margin-right: 29px;
-    }
   }
 }
 .contacts__card-top {
@@ -57,7 +62,7 @@
 }
 .contacts__name {
   @include flex(flex, center, center);
-  @include font(12px, 500, 186%, 0.04em);
+  @include font(12px, 500, 1.86, null);
   width: 80px;
   height: 16px;
   text-transform: uppercase;
@@ -67,13 +72,13 @@
   color: var(--main-white-color);
   margin-bottom: 25px;
   @include min768 {
-    @include font(16px, 500, 186%, 0.04em);
+    @include font(16px, 500, 1.86, null);
     width: 73px;
     height: 28px;
     margin-bottom: 30px;
   }
   @include min1280 {
-    @include font(16px, 500, 186%, 0.04em);
+    @include font(16px, 500, 1.86, null);
     margin-bottom: 32px;
   }
 }
@@ -81,35 +86,35 @@
   width: 130px;
   background: #c2e297;
   @include min768 {
-    @include font(16px, 500, 186%, 0.04em);
+    @include font(16px, 500, 1.86, null);
     width: 138px;
   }
   @include min1280 {
-    @include font(16px, 500, 186%, 0.04em);
+    @include font(16px, 500, 1.86, null);
     margin-bottom: 32px;
   }
 }
 .contacts__location {
-  @include font(12px, 500, 186%, 0.04em);
+  @include font(12px, 500, 1.86, null);
   color: var(--main-text-color);
   margin-bottom: 10px;
   @include min768 {
-    @include font(14px, 500, 186%, 0.04em);
+    @include font(14px, 500, 1.86, null);
     margin-bottom: 14px;
   }
   @include min1280 {
-    @include font(16px, 500, 186%, 0.04em);
+    @include font(16px, 500, 1.86, null);
     margin-bottom: 10px;
   }
 }
 .description {
-  @include font(12px, 500, 150%, null);
+  @include font(12px, 500, 1.5, null);
   color: var(--secondary-text-color);
   @include min768 {
-    @include font(14px, 500, 166%, 0.04em);
+    @include font(14px, 500, 166%, null);
   }
   @include min1280 {
-    @include font(16px, 500, 183%, 0.04em);
+    @include font(16px, 500, 1.83, null);
   }
 }
 .contacts__card-middle {
@@ -123,23 +128,23 @@
   }
 }
 .contacts__schedule {
-  @include font(12px, 500, 186%, null);
+  @include font(12px, 500, 1.86, null);
   color: var(--main-text-color);
   @include min768 {
-    @include font(14px, 500, 186%, null);
+    @include font(14px, 500, 1.86, null);
   }
   @include min1280 {
-    @include font(16px, 500, 186%, null);
+    @include font(16px, 500, 1.86, null);
   }
 }
 .contacts__time {
-  @include font(12px, 500, 186%, null);
+  @include font(12px, 500, 1.86, null);
   color: var(--sub-title-color);
   @include min768 {
-    @include font(14px, 500, 186%, null);
+    @include font(14px, 500, 1.86, null);
   }
   @include min1280 {
-    @include font(16px, 500, 186%, null);
+    @include font(16px, 500, 1.86, null);
   }
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -161,13 +166,13 @@
   }
 }
 .contacts__link {
-  @include font(12px, 500, 150%, null);
+  @include font(12px, 500, 1.5, null);
   color: var(--secondary-text-color);
   @include min768 {
-    @include font(14px, 500, 183%, null);
+    @include font(14px, 500, 1.83, null);
   }
   @include min1280 {
-    @include font(16px, 500, 183%, null);
+    @include font(16px, 500, 1.83, null);
   }
 }
 .contacts__button-wrap {
@@ -214,7 +219,7 @@
   @include min768 {
     padding: 0 38px;
   }
-  @include min768 {
+  @include min1280 {
     padding: 0 40px;
   }
 }
