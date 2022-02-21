@@ -40,7 +40,8 @@
   }();
     
     let isScrolling = false;
-    window.addEventListener('scroll', throttleScroll, false);
+  window.addEventListener('scroll', throttleScroll, false);
+  window.addEventListener('load', runNumbers, false);
     
     //function prevents call an event more than 60 times/second
     function throttleScroll() {
