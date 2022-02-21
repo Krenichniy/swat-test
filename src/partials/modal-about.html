@@ -1,6 +1,5 @@
 <!-- modal about -->
 
-
 <div class="the-modal modal-is-hidden how-read-more-modal">
   <div class="about-modal--wrap">
     <div class="about-modal__decoration-stick"></div>
@@ -33,11 +32,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  document.querySelector('.how-read-more-modal-close').addEventListener('click', () => {
-    document
-      .getElementById('my-video')
-      .contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-  });
-</script>

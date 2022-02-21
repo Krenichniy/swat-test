@@ -58,6 +58,14 @@
       crossorigin="anonymous"
     ></script>
 
+    <script>
+      document.querySelector('.how-read-more-modal-close').addEventListener('click', () => {
+        document
+          .getElementById('my-video')
+          .contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      });
+    </script>
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
