@@ -25,9 +25,11 @@
       display: flex;
       flex-direction: row;
       max-width: 100%;
+      margin-left: -60px;
     }
     @include min1280 {
       justify-content: space-between;
+      margin-left: -30px;
     }
   }
 
@@ -41,17 +43,17 @@
     }
 
     @include min768 {
-      width: 180px;
+      width: calc(100% / 3 - 60px);
       height: 226px;
+      margin-left: 60px;
 
       & + & {
         margin-top: 0;
-        margin-left: 60px;
       }
     }
 
     @include min1280 {
-      width: 330px;
+      width: calc(100% / 3 - 30px);
       height: 222px;
 
       & + & {
@@ -107,7 +109,7 @@
 
   &__title {
     font-family: Titan One;
-    @include font(36px, normal, calc(41 / 36), inherit);
+    @include font(36px, 400, calc(41 / 36), inherit);
     text-transform: uppercase;
 
     color: var(--accent-color);
@@ -115,18 +117,16 @@
     margin-bottom: 16px;
 
     @include min768 {
-      font-size: 48px;
-      line-height: 55px;
+      @include font(48px, 400, calc(55 / 48), inherit);
     }
     @include min1280 {
-      font-size: 58px;
-      line-height: 66px;
+      @include font(58px, 400, calc(66 / 58), inherit);
     }
   }
 
   &__text {
     font-family: DM Sans;
-    @include font(12px, bold, 170%, inherit);
+    @include font(12px, 700, 170%, inherit);
 
     color: var(--main-text-color);
 
