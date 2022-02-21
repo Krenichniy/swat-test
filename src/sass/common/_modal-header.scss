@@ -24,12 +24,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  padding: 40px;
-  width: calc(100% - 30px);
+  padding: 20px;
+  width: 95vw;
   min-height: 609px;
   background-color: #e17992;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.7);
@@ -43,9 +42,10 @@
     }
   }
   @include min480 {
+    padding: 30px;
     width: 450px;
   }
-  @include min1280 {
+  @include min768 {
     width: 600px;
     min-height: 600px;
   }
@@ -64,7 +64,7 @@
 .buy-modal__title {
   @include font(32px, 400, (36 / 32), null);
   color: var(--main-white-color);
-  padding-top: 20px;
+  padding-top: 40px;
   text-align: center;
   margin-bottom: 40px;
 }
