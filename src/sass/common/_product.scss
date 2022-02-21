@@ -76,7 +76,9 @@
 }
 
 .product-link {
-  width: calc(100% / 3 - 20px);
+  @include min768 {
+    width: calc(100% / 3 - 20px);
+  }
   position: relative;
   border-radius: 24px;
   background-color: var(--back-color);
