@@ -1,10 +1,10 @@
 <!-- modal about -->
 
-<div how-read-more-modal class="the-modal modal-is-hidden">
+<div class="the-modal modal-is-hidden how-read-more-modal">
   <div class="about-modal--wrap">
     <div class="about-modal__decoration-stick"></div>
     <div class="about-modal">
-      <button how-read-more-modal-close class="about-modal__close">X</button>
+      <button class="about-modal__close how-read-more-modal-close">X</button>
       <div class="about-modal__title">
         <span class="about-modal__title--slim">You</span>
         <span class="about-modal__title--slim">can't buy</span>
@@ -17,10 +17,11 @@
       <!-- the video -->
       <div class="about-modal__video-wrap">
         <iframe
+          id="my-video"
           class="about-modal__video"
           width="560"
           height="315"
-          src="https://www.youtube-nocookie.com/embed/8fAcW1Rbd2I?start=10"
+          src="https://www.youtube-nocookie.com/embed/8fAcW1Rbd2I?enablejsapi=1"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -30,3 +31,11 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.querySelector('.how-read-more-modal-close').addEventListener('click', () => {
+    document
+      .getElementById('my-video')
+      .contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  });
+</script>
