@@ -1,5 +1,5 @@
 <!-- Бекдроп -->
-<div class="buy-backdrop" data-modal>
+<div class="buy-backdrop is-hidden" data-modal>
 
     <!-- Модальное окно -->
     <div class="buy-modal">
@@ -20,39 +20,63 @@
                         <source srcset="./images/products-icecream-mob@1x.png 1x, ./images/products-icecream-mob@2x.png 2x" />
                         <img src="./images/products-icecream-mob@1x.png" alt="Icecream" class="checkbox__img" />
                     </picture>
-                    <input type="checkbox" id="a" class="visually-hidden" name="check">
+                    <input type="checkbox" id="a" class="visually-hidden" name="check" value="icecream">
                     <label for="a" class="checkbox">
                         <span class="checkbox__inner">
                             <span class="check__ball check__ball--pink"></span>
                         </span>
-                        <p>sasasas</p>
                     </label>
+                    <p class="checkbox__sub-label">Ice 
+                        cream</p>
                 </li>
                 <li class="buy-modal__item">
                     <picture>
                         <source srcset="./images/products-icecoffee-mob@1x.png 1x, ./images/products-icecoffee-mob@2x.png 2x" />
                         <img src="./images/products-icecoffee-mob@1x.png" alt="Icecoffee" class="checkbox__img" />
                     </picture>
-                    <input type="checkbox" id="b" class="visually-hidden" name="check">
+                    <input type="checkbox" id="b" class="visually-hidden" name="check" value="icecoffee">
                     <label for="b" class="checkbox">
                         <span class="checkbox__inner">
                             <span class="check__ball check__ball--orange"></span>
                         </span>
                     </label>
+                    <p class="checkbox__sub-label">Ice 
+                        coffee</p>
                 </li>
                 <li class="buy-modal__item">
                     <picture>
                         <source srcset="./images/products-iceshakes-mob@1x.png 1x, ./images/products-iceshakes-mob@2x.png 2x" />
                         <img src="./images/products-iceshakes-mob@1x.png" alt="Iceshakes" class="checkbox__img" />
                     </picture>
-                    <input type="checkbox" id="c" class="visually-hidden" name="check">
+                    <input type="checkbox" id="c" class="visually-hidden" name="check" value="milkshake">
                     <label for="c" class="checkbox">
                         <span class="checkbox__inner">
                             <span class="check__ball check__ball--green"></span>
                         </span>
                     </label>
+                    <p class="checkbox__sub-label">Milk 
+                        shakes</p>
                 </li>
             </ul>
+            <!-- Поле ввода имени -->
+            <label class="modal-form__label modal-form__label--top">
+                <span class="modal-form__text">Name</span>
+                <input type="text" name="user-name" class="modal-form__input" required>
+                <svg class="modal-form__icon" width="18" height="18">
+                    <use href="./images/header-modal.svg#user-form-icon"></use>
+                </svg>
+            </label>
+            <!-- Поле ввода телефона -->
+            <label class="modal-form__label">
+                <span class="modal-form__text">Phone</span>
+                <input type="tel" name="user-phone" class="modal-form__input" required>
+                <svg class="modal-form__icon" width="18" height="18">
+                    <use href="./images/header-modal.svg#phone-form-icon"></use>
+                </svg>
+            </label>
+            <button class="first-btn send-btn" type="submit">
+                <span class="first-btn__start">Send</span>
+            </button>
         </form>
     </div>
 
