@@ -4,6 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 999;
 
   background-color: rgba(255, 248, 220, 0.4);
 }
@@ -63,6 +64,7 @@
   width: 25px;
   height: 25px;
   padding: 3px 3px;
+  cursor: pointer;
 
   @include flex(flex, center, center);
   background-color: var(--dark-btn-hover);
@@ -158,6 +160,7 @@
   width: 25px;
   height: 25px;
   padding: 3px 3px;
+  cursor: pointer;
 
   @include flex(flex, center, center);
   background-color: rgba(255, 20, 147, 0.2);

@@ -206,6 +206,7 @@
 .contacts__button-text--red {
   @include font(16px, 700, 1.31, null);
   margin-right: 8px;
+  cursor: pointer;
 }
 .contacts__button--wight {
   @include flex(flex, center, center);
@@ -214,6 +215,7 @@
   padding: 0 32px;
   border-radius: 22px;
   background-color: var(--main-white-color);
+  cursor: pointer;
   &:hover,
   &:focus {
     background-color: var(--light-btn-hover);
