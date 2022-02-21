@@ -6,37 +6,42 @@
 
     //add event for scroll
 
-    let runNumbers = (function () {
-      if (!mobile) {
-        return function () {
-          if (check('counter-1')) {
-            runall();
-            window.removeEventListener('scroll', runNumbers, false);
-          }
-        };
-      } else {
-        return function () {
-          if (check('counter-1') && !mobile[0]) {
-            run1();
-            mobile[0] = true;
-          }
-          if (check('counter-2') && !mobile[1]) {
-            run2();
-            mobile[1] = true;
-          }
-          if (check('counter-3') && !mobile[2]) {
-            run3();
-            mobile[2] = true;
-          }
-          if (mobile[0] && mobile[1] && mobile[2]) {
-            window.addEventListener('scroll', throttleScroll, false);
-          }
-        };
-      }
-    })();
+  let runNumbers = function () {
+    
+    document.getElementById('counter-1').innerHTML = "0";
+    document.getElementById('counter-2').innerHTML = "0";
+    document.getElementById('counter-3').innerHTML = "0";
+    if (!mobile) {
+      return function () {
+        if (check('counter-1')) {
+          runall();
+          window.removeEventListener('scroll', throttleScroll, false);
+        }
+      };
+    } else {
+      return function () {
+        if (check('counter-1') && !mobile[0]) {
+          run1();
+          mobile[0] = true;
+        }
+        if (check('counter-2') && !mobile[1]) {
+          run2();
+          mobile[1] = true;
+        }
+        if (check('counter-3') && !mobile[2]) {
+          run3();
+          mobile[2] = true;
+        }
+        if (mobile[0] && mobile[1] && mobile[2]) {
+          window.removeEventListener('scroll', throttleScroll, false);
+        }
+      };
+    }
+  }();
     
     let isScrolling = false;
-    window.addEventListener('scroll', throttleScroll, false);
+  window.addEventListener('scroll', throttleScroll, false);
+  window.addEventListener('load', runNumbers, false);
     
     //function prevents call an event more than 60 times/second
     function throttleScroll() {
@@ -90,14 +95,13 @@
 
       let duration = d;
       let speed = (1000 * duration) / maxNumber;
-      var speed2 = (speed / maxNumber) * 3;
 
       let fun = function () {
         currentNumber = currentNumber + step;
         numbers.innerText = currentNumber;
         if (currentNumber > maxNumber) {
           numbers.innerText = maxNumber;
-          console.log('finish');
+          
         } else if (currentNumber > steps[0]) {
           step = c[1];
           speed = speed + speed / 50;
