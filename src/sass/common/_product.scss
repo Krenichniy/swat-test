@@ -59,19 +59,18 @@
 .product-container {
   max-width: 280px;
   justify-content: center;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 161px 40px 40px 40px;
 
   @include min768 {
     max-width: 220px;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding: 152px 11px 40px 11px;
   }
 
   @include min1280 {
     max-width: 329px;
     padding-left: 44px;
     padding-right: 44px;
+    padding: 161px 44px 50px 44px;
   }
 }
 
@@ -258,17 +257,11 @@
   font-family: Titan One;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 161px;
 
   color: var(--main-white-color);
 
-  @include min768 {
-    padding-top: 152px;
-  }
-
   @include min1280 {
     @include font(30px, 400, 1.13, 0.04em);
-    padding-top: 163px;
   }
 
   &::after {
@@ -314,7 +307,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  padding-bottom: 40px;
 
   @include min768 {
     margin-top: 40px;
@@ -322,6 +314,5 @@
 
   @include min1280 {
     margin-top: 62px;
-    padding-bottom: 50px;
   }
 }
