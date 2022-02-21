@@ -36,11 +36,11 @@
   }
   @include min768 {
     width: 85vw;
-    height: 85vh;
+    height: 95vh;
   }
   @include min1280 {
     width: 85vw;
-    height: 85vh;
+    height: 95vh;
   }
 }
 .location-form {
@@ -89,8 +89,7 @@
     margin-bottom: 25px;
   }
   @include min1280 {
-    font-size: 35px;
-    margin-bottom: 30px;
+    font-size: 30px;
   }
 }
 
@@ -112,7 +111,7 @@
 
 .franchise-modal {
   position: absolute;
-  display: block;
+  display: inline-block;
   width: 90vw;
   height: 90vh;
   top: 50%;
@@ -123,6 +122,9 @@
 
   transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms;
+  @include min320 {
+    width: 100%;
+  }
   @include min480 {
     width: 440px;
     height: 90vh;
@@ -144,7 +146,7 @@
   }
   @include min1280 {
     width: 1000px;
-    height: 80vh;
+    height: 90vh;
   }
 }
 
@@ -179,7 +181,7 @@
 
     font-family: Titan One;
     margin-bottom: 15px;
-    @include font(35px, 400, 1.12, 0.06em);
+    @include font(25px, 400, 1.12, 0.06em);
     text-align: center;
     text-transform: uppercase;
     color: #d41443;
@@ -195,7 +197,6 @@
 }
 
 .franchise-list__item {
-  margin-bottom: 15px;
   margin-left: 20px;
 
   box-sizing: border-box;
@@ -208,6 +209,7 @@
   @include min768 {
     width: calc(100% / 5 - 20px);
     margin-left: 20px;
+    margin-bottom: 10px;
     .franchise-list__item:nth-last-child(-n + 5) {
       margin-bottom: 0;
     }
@@ -225,20 +227,19 @@
   display: block;
   font-family: Titan One;
   margin-bottom: 25px;
-  margin-top: 20px;
+  margin-top: 10px;
   @include font(25px, 400, 1.12, 0.06em);
   text-align: center;
   text-transform: uppercase;
   color: #d41443;
   @include min768 {
-    margin-bottom: 15px;
-    font-size: 35px;
+    margin-bottom: 10px;
   }
 }
 
-.franchise-form__field {
+.franchise-form-field {
   input {
-    width: 100%;
+    width: calc(100% - 56px);
     height: 40px;
     padding-left: 42px;
     padding-right: 12px;
@@ -250,32 +251,27 @@
     border-radius: 4px;
 
     background-color: transparent;
-    @include min480 {
-      width: 350px;
-    }
     @include min768 {
-      width: 604px;
-    }
-    @include min1280 {
-      width: 904px;
+      height: 20px;
     }
   }
 }
-.franchise-form__field {
+.franchise-form-field {
   @include flex(flex, start, left);
   flex-direction: column;
 }
-.franchise-form__lable {
+.franchise-form-field__lable {
+  display: inline-block;
   margin-bottom: 7px;
 
   color: #d41342;
   @include font(12px, 400, 1.17, 0.01em);
   @include min768 {
-    margin-bottom: 15px;
+    margin-bottom: 7px;
     font-size: 14px;
   }
 }
-.franchise-form__align-icon {
+.franchise-form-field__align-icon {
   position: relative;
   margin-bottom: 30px;
 
@@ -283,7 +279,7 @@
     margin-bottom: 10px;
   }
 }
-.franchise-form__icon {
+.franchise-form-field__icon {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -293,7 +289,7 @@
     fill: #d41342;
   }
 }
-.franchise-form__input {
+.franchise-form-field__input {
   &:focus {
     border: 1px solid #d41342;
   }
@@ -310,6 +306,9 @@
   text-align: center;
   color: #d41342;
 
+  @include min768 {
+    height: 30px;
+  }
   background-color: var(--main-white-color);
   border-radius: 22px;
   border: 1px solid var(--accent-color);
