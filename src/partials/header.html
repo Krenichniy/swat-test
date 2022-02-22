@@ -30,13 +30,13 @@
     <!-- Контейнер кнопок хедера -->
     <div class="header__btn-container">
       <!-- Кнопка мобильного меню -->
-      <button class="btn mob-menu__open-btn js-open-menu" type="button" aria-expanded="false">
+      <button class="btn mob-menu__open-btn js-open-menu" type="button" aria-expanded="false" aria-label="Open mobile menu">
         <svg class="mob-menu-btn__icon" width="20" height="12">
           <use href="./images/mob-menu-icons.svg#burger-icon"></use>
         </svg>
       </button>
       <!-- Кнопка Buy -->
-      <button class="first-btn buy-btn" type="button">
+      <button class="first-btn buy-btn" type="button" data-modal-open>
         <span class="first-btn__start">Buy now</span>
         <img
           src="./images/btn-corner.svg"
@@ -50,12 +50,12 @@
     <!-- Мобильное меню -->
     <div class="header__mob-menu js-menu-container">
       <div class="header__mob-menu-box">
-        <button class="mob-menu__close-btn js-close-menu">
+        <button class="mob-menu__close-btn js-close-menu" aria-label="Close mobile menu">
           <svg class="mob-menu-btn__icon" width="14" height="14">
             <use href="./images/mob-menu-icons.svg#close-icon"></use>
           </svg>
         </button>
-        <button class="first-btn buy-btn-mob" type="button">
+        <button class="first-btn buy-btn-mob" type="button" data-modal-open data-modal2-open>
           <span class="first-btn__start">Buy now</span>
           <img
             src="./images/btn-corner.svg"
@@ -68,7 +68,7 @@
         <nav class="header__mob-nav">
           <ul class="header__mob-link-list">
             <li class="header__mob-item">
-              <a href="./index.html" class="header__mob-link current-link">Home</a>
+              <a href="#hero" class="header__mob-link current-link">Home</a>
             </li>
             <li class="header__mob-item">
               <a href="#about" class="header__mob-link">About us</a>

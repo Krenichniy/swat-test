@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -86,6 +92,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 article,
 aside,
