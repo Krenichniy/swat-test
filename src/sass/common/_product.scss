@@ -314,13 +314,23 @@
 
 .product-info-btn {
   position: relative;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   z-index: 100;
+  border-radius: 50%;
   cursor: pointer;
-  background: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  background-color: var(--main-white-color);
+  border: none;
+
+&:hover {
+  transform: rotate(-135deg) scale(1.15);
+  box-shadow: 1px 4px 6px 0px #000000, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+}
 
   @include min768 {
     margin-top: 40px;
@@ -329,6 +339,36 @@
   @include min1280 {
     margin-top: 62px;
   }
+}
+
+.arrow-product {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--accent-color); 
+
+  animation-name: changeBgColor;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  @keyframes changeBgColor {
+    0% {
+      fill: var(--accent-color);
+    }
+
+    50% {
+       fill: var(--loc-hov-btn);
+    }
+
+    100% {
+       fill: var(--secondary-text-color);
+    }
+  }
+
+
 }
 
 .product-container-content {
