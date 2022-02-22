@@ -13,11 +13,11 @@
 
 {
     let modalWindowsArr = [
-        'menu-modal', 'menu-buy-modal', 
-        'header-products-modal', 'header-how-modal', 'header-milk-modal',
-        'product-1-modal', 'product-2-modal', 'product-3-modal',
-        'how-read-more-modal',
-        'contacts-location-modal', 'contacts-franchise-modal', 
+        '.menu-modal', '.menu-buy-modal', 
+        '.header-products-modal', '.header-how-modal', '.header-milk-modal',
+        '.product-1-modal', '.product-2-modal', '.product-3-modal',
+        '.how-read-more-modal',
+        '.contacts-location-modal', '.contacts-franchise-modal',
     ];
     let openButtonsArr = [];
     let closeButtonsArr = [];
@@ -26,19 +26,20 @@
         openButtonsArr.push(element + '-open');
         closeButtonsArr.push(element + '-close');
     })
-
+    
     for (let i = 0; i < openButtonsArr.length; i++) {
-        
-        let openButton = document.querySelector('[' + openButtonsArr[i] + ']');
+                         
+        let openButton = document.querySelector(openButtonsArr[i]);
         if (!openButton) {
+            console.log(openButtonsArr[i]);
             continue;
         }
-        let closeButton = document.querySelector('[' + closeButtonsArr[i] + ']');
+        let closeButton = document.querySelector(closeButtonsArr[i]);
         if (!closeButton) {
             console.log("Уважаемый разработчик, вы добавили кнопку открытия '" + modalWindowsArr[i] + "', но не добавили кнопку закрытия модалки");
             continue;
         }
-        let modalWindow = document.querySelector('[' + modalWindowsArr[i] + ']');
+        let modalWindow = document.querySelector(modalWindowsArr[i]);
         if (!closeButton) {
             console.log("Уважаемый разработчик, вы добавили кнопку открытия и закрытия '" + modalWindowsArr[i] + "', но не добавили модалку");
             continue;
@@ -50,6 +51,7 @@
 
         openButton.addEventListener('click', fun);
         closeButton.addEventListener('click', fun);
+
     }
     
 }
