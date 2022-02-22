@@ -81,6 +81,16 @@
   position: relative;
   border-radius: 24px;
   background-color: var(--back-color);
+   transform: scale(1);
+   transition: box-shadow 400ms linear,
+   border 650ms linear,
+   transform 500ms;
+
+   &:hover {
+     transform: scale(1);
+     box-shadow: 1px 4px 6px 0px #000000, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+     border: 0.5px;
+   }
 
   @include min1280 {
     width: calc(100% / 3 - 29px);
@@ -116,6 +126,7 @@
 
   &::before {
     content: '';
+    z-index: 99;
     position: absolute;
     top: -23%;
     left: 50%;
@@ -302,11 +313,24 @@
 }
 
 .product-info-btn {
-  background: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  z-index: 100;
+  border-radius: 50%;
+  
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  background-color: var(--main-white-color);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+  transform: rotate(-135deg) scale(1.15);
+  box-shadow: 1px 4px 6px 0px #000000, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+  }
 
   @include min768 {
     margin-top: 40px;
@@ -316,3 +340,90 @@
     margin-top: 62px;
   }
 }
+
+.arrow-product {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--accent-color); 
+
+  animation-name: changeBgColor;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  @keyframes changeBgColor {
+    0% {
+      fill: var(--accent-color);
+    }
+
+    50% {
+       fill: var(--loc-hov-btn);
+    }
+
+    100% {
+       fill: var(--secondary-text-color);
+    }
+  }
+}
+
+.product-container-content {
+  @include font(14px, 700, 152%, 0.04em);
+  font-family: DM Sans;
+  text-align: center;
+  border-radius: 24px;
+  color: var(--main-white-color);
+
+  margin-left: auto;
+  margin-right: auto;
+  
+  position: absolute;
+  padding: 163px 24px;
+  max-width: 280px;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100%);
+  overflow: hidden;
+  transform: scale(1);
+  transition: box-shadow 400ms linear,
+  border 650ms linear,
+  transform 500ms;
+  @include min768 {
+    max-width: 220px;
+  }
+
+  @include min1280 {
+    max-width: 329px;
+  }
+   &:hover {
+     transform: scale(1.02);
+     box-shadow: 1px 4px 6px 0px #000000, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+   }
+}
+
+.content1{ 
+  background-color: var(--back-color); 
+}
+
+.content2 {
+  background-color: #f0d1a5;
+}
+
+.content3 {
+  background-color: #c2e297;
+}
+
+.product-link .product-container-content {
+  transform: translateX(0);
+  transform:translateX(-20px);
+  transform:translateX(-20px);
+  -webkit-transition:all 600ms ease;
+  transition:all 600ms ease;
+
+}
+
+
