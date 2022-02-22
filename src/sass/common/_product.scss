@@ -319,13 +319,14 @@
   height: 40px;
   z-index: 100;
   border-radius: 50%;
-  cursor: pointer;
+  
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   background-color: var(--main-white-color);
   border: none;
+  cursor: pointer;
 
 &:hover {
   transform: rotate(-135deg) scale(1.15);
