@@ -26,7 +26,7 @@
 
   // close mobile menu
 {
-  let tags = document.getElementsByClassName('header__mob-item'); console.log(tags);
+  let tags = document.getElementsByClassName('header__mob-item');
   let btn = document.querySelector('.buy-btn-mob');
 
   let fun = function (e) {
