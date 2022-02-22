@@ -16,14 +16,12 @@
   transition-property: opacity;
   @include transitionDef();
 
-  background-color: #00000050;
+  background-color: rgb(255 248 220 / 59%);
 }
 
 .the-modal.modal-is-hidden > .about-modal--wrap,
 .the-modal.modal-is-hidden > .about-modal__decoration-stick {
   transform: translateY(100%);
-  //top: 100%;
-  // left: 50%;
 
   transition-property: transform;
   @include transitionDef();
@@ -86,8 +84,8 @@
 
   padding-top: 20px;
 
-  -webkit-box-shadow: 5px 19px 21px -6px rgb(0 0 0 / 59%);
-  box-shadow: 5px 19px 21px -6px rgb(0 0 0 / 59%);
+  -webkit-box-shadow: 5px 19px 21px -6px rgb(212 20 67 / 59%);
+  box-shadow: 5px 19px 21px -6px rgb(212 20 67 / 59%);
   background: linear-gradient(
     -35deg,
     #d41443 25%,
@@ -119,6 +117,10 @@
     }
   }
 
+  @media screen and (max-height: 512px) {
+    top: 0;
+  }
+
   @include min768 {
   }
 
@@ -143,8 +145,8 @@
     padding-left: 20px;
     padding-right: 20px;
 
-    -webkit-box-shadow: -19px 1px 21px -6px rgb(0 0 0 / 59%);
-    box-shadow: -19px 1px 21px -6px rgb(0 0 0 / 59%);
+    -webkit-box-shadow: -19px 1px 21px -6px rgb(212 20 67 / 59%);
+    box-shadow: -19px 1px 21px -6px rgb(212 20 67 / 59%);
 
     background: linear-gradient(
       55deg,
@@ -174,7 +176,7 @@
     font-family: Titan One;
     @include font(var(--width), normal, calc(20.5 / 16), inherit);
     text-transform: uppercase;
-    color: white;
+    color: rgba(255, 20, 147, 0.7);
 
     @include min768 {
       @include font(24px, normal, calc(24.5 / 24), inherit);
@@ -289,8 +291,8 @@
   background: repeating-linear-gradient(-45deg, #e09c5f, #e09c5f 25px, #e1a560 25px, #e1a560 30px);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  -webkit-box-shadow: 19px 1px 21px -6px rgb(0 0 0 / 59%);
-  box-shadow: 19px 1px 21px -6px rgb(0 0 0 / 59%);
+  -webkit-box-shadow: 19px 1px 21px -6px rgb(212 20 67 / 59%);
+  box-shadow: 19px 1px 21px -6px rgb(212 20 67 / 59%);
 
   @include min768 {
     font-size: 14px;
@@ -307,7 +309,7 @@
     border-top-left-radius: 16px;
     border-bottom-right-radius: 0px;
 
-    -webkit-box-shadow: -19px 1px 21px -6px rgb(0 0 0 / 59%);
-    box-shadow: -19px 1px 21px -6px rgb(0 0 0 / 59%);
+    -webkit-box-shadow: -19px 1px 21px -6px rgb(212 20 67 / 59%);
+    box-shadow: -19px 1px 21px -6px rgb(212 20 67 / 59%);
   }
 }
