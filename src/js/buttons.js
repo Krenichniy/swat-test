@@ -17,7 +17,7 @@
         'header-products-modal', 'header-how-modal', 'header-milk-modal',
         'product-1-modal', 'product-2-modal', 'product-3-modal',
         'how-read-more-modal',
-        'contacts-location-modal', 'contacts-franchise-modal', 'product-container-content', 'content2', 'content3'
+        'contacts-location-modal', 'contacts-franchise-modal', 
     ];
     let openButtonsArr = [];
     let closeButtonsArr = [];
