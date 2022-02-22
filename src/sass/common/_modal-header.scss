@@ -1,0 +1,274 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(155, 144, 147, 0.2);
+  transition: opacity 300ms ease-out;
+  transition: visibility 300ms ease-out;
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  .modal-header {
+    transform: scale(0.2) rotate(180deg);
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  border-radius: 5px;
+  width: 90vw;
+
+  @include min480 {
+    width: 450px;
+    min-height: 609px;
+  }
+
+  @include min1280 {
+    width: 526px;
+    min-height: 581px;
+  }
+  padding: 40px;
+  background-color: var(--main-white-color);
+  box-shadow: 10px 10px 8px 2px rgba(255, 128, 128, 0.4), 0px 1px 1px rgba(255, 179, 179, 0.2),
+    0px 2px 1px rgba(255, 77, 77, 0.4);
+  border-radius: 4px;
+  transition: transform 300ms ease-out;
+
+  background-image: url(../images/products-icecream-mob@1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom 5px left;
+  background-size: 210px;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/products-icecream-mob@2x.png);
+  }
+
+  @include min768 {
+    background-image: url(../images/products-icecream-tab@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/products-icecream-tab@2x.png);
+    }
+  }
+  @include min1280 {
+    background-image: url(../images/products-icecream-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/products-icecream-desktop@2x.png);
+    }
+  }
+}
+
+.modal-header__close {
+  position: absolute;
+  top: 21px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  @include min480 {
+    top: 10px;
+    width: 35px;
+    height: 35px;
+  }
+  border-radius: 50%;
+  background-color: transparent;
+  @include flex(flex, center, center);
+  cursor: pointer;
+}
+
+.modal-header__icon {
+  .modal-header__close:hover &,
+  .modal-header__close:focus & {
+    fill: var(--accent-color);
+  }
+  transition: fill 300ms ease-out;
+}
+
+.modal-header__title {
+  font-family: Titan One;
+  @include font(26px, 700, 1.16, 0.04em);
+
+  @include min1280 {
+    font-size: 27px;
+    line-height: 1.21;
+  }
+  text-align: center;
+  margin-bottom: 12px;
+
+  color: var(--accent-color);
+}
+
+.header-form {
+  background-color: rgba(255, 20, 147, 0.2);
+  border-radius: 4px;
+}
+
+.header-form__form-field {
+  margin-bottom: 10px;
+}
+
+.header-form__input-wrap {
+  position: relative;
+}
+
+.header-form__icon {
+  position: absolute;
+  fill: var(--sub-title-color);
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  .header-form__input:focus + & {
+    fill: var(--accent-color);
+  }
+  transition: fill 300ms ease-out;
+}
+
+.header-form__input {
+  width: 100%;
+  height: 40px;
+  color: var(--main-text-color);
+  border: 1px solid var(--sub-title-color);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  transition: border-color 300ms ease-out;
+}
+
+.header-form__label {
+  display: inline-block;
+  font-family: DM Sans;
+  @include font(14px, 400, 1.16, 0.04em);
+  margin-bottom: 4px;
+
+  color: var(--secondary-text-color);
+}
+
+.modal-order__group {
+  @include flex(flex, space-evenly, center);
+  margin-bottom: 40px;
+}
+
+.modal-order__checkbox-img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  @include min480 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.modal-order__checkbox:checked + .modal-order__label::after {
+  background-color: var(--accent-color);
+}
+
+.modal-order__checkbox:checked + .modal-order__label .modal-order__text {
+  color: var(--accent-color);
+}
+
+.modal-order__text {
+  font-family: Titan One;
+  @include font(10px, 400, 1.14, 0.04em);
+  @include min480 {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  @include min1280 {
+    font-size: 16px;
+  }
+  text-transform: uppercase;
+  color: var(--sub-title-color);
+
+  transition: color 300ms ease-out;
+}
+
+.modal-order__label::after {
+  content: '';
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
+  margin-left: 7px;
+  transition: background-color 300ms ease-out;
+}
+
+.modal-order__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form__form-check {
+  @include flex(flex, center, null);
+  margin-bottom: 70px;
+}
+
+.form-check__text {
+  @include flex(flex, center, center);
+  font-family: inherit;
+  @include font(13px, 400, 1.17, 0.04em);
+  @include min1280 {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  color: var(--accent-color);
+}
+
+.form-check__text span {
+  margin-left: auto;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--accent-color);
+  color: transparent;
+  border-radius: 2px;
+  @include flex(flex, center, center);
+  margin-right: 7px;
+  transition: background-color 300ms ease-out, fill 300ms ease-out;
+}
+
+.form-check__icon {
+  fill: transparent;
+}
+
+.form-check__policy:checked + .form-check__text span {
+  border: none;
+  background-color: var(--accent-color);
+  fill: var(--main-white-color);
+}
+
+.modal-header__submit {
+  @include flex(flex, center, center);
+  color: var(--main-white-color);
+  border-radius: 22px;
+  background-color: var(--accent-color);
+  @include font(16px, 700, 1.31, null);
+  min-width: 200px;
+  min-height: 50px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-white-color);
+    color: var(--accent-color);
+    box-shadow: 10px 10px 8px 2px rgba(255, 128, 128, 0.4), 0px 1px 1px rgba(255, 179, 179, 0.2),
+      0px 2px 1px rgba(255, 77, 77, 0.4);
+  }
+
+  transition: background-color 300ms ease-out, color 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.modal-header__button-wrap {
+  @include flex(flex, center, null);
+}

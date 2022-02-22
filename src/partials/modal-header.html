@@ -1,0 +1,104 @@
+<div class="backdrop" data-modal>
+    <div class="modal-header">
+        <button type="button" class="modal-header__close" data-modal-close>
+            <img class="modal-header__icon" src="./images/hero-icecream-mob@1x.png" alt="Ice cream">
+        </button>
+        <p class="modal-header__title">Ice Cream Order Form</p>
+        <form action="#" class="header-form">
+            <div class="header-form-field header-form__form-field">
+                <label for="user-name" class="header-form__label">Your name</label>
+                <div class="header-form__input-wrap">
+                    <input type="text" name="user-name" class="header-form__input" id="user-name" />
+                    <svg class="header-form__icon" width="18" height="18">
+                        <use href="./images/mob-menu-icons.svg#icon-person"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="header-form-field header-form__form-field">
+                <label for="user-tel" class="header-form__label">Your phone</label>
+                <div class="header-form__input-wrap">
+                    <input type="tel" name="tel" class="header-form__input" id="user-tel" />
+                    <svg class="header-form__icon" width="18" height="18">
+                        <use href="./images/mob-menu-icons.svg#icon-phone"></use>
+                    </svg>
+                </div>
+            </div>
+            <div role="group" class="modal-order modal-order__group">
+                <input class="modal-order__checkbox" type="checkbox" name="order" value="ice cream" id="ice cream" checked>
+                <label class="modal-order__label" for="ice cream"">
+                    <picture>
+                        <source srcset="./images/products-icecream-desktop@1x.png 1x,
+                        ./images/products-icecream-desktop@2x.png 2x" 
+                        media="(min-width: 1280px)">
+                    
+                        <source srcset="./images/products-icecream-tab@1x.png 1x,
+                        ./images/products-icecream-tab@2x.png 2x" 
+                        media="(min-width: 768px)">
+                    
+                        <source srcset="./images/products-icecream-mob@1x.png 1x,
+                        ./images/products-icecream-mob@2x.png 2x" 
+                        media="(min-width: 480px)">
+                    
+                        <img src="./images/products-icecream-mob@1x.png" alt="ice cream" class="modal-order__checkbox-img">
+                    </picture>
+            
+                    <span class="modal-order__text">ICE CREAM</span>
+                </label>
+
+                <input class="modal-order__checkbox" type="checkbox" name="order" value="ice coffee" id="ice coffee">
+                <label class="modal-order__label" for="ice coffee">
+                    <picture>
+                        <source srcset="./images/products-icecoffee-desktop@1x.png 1x,
+                        ./images/products-icecoffee-desktop@2x.png 2x" 
+                        media="(min-width: 1280px)">
+                    
+                        <source srcset="./images/products-icecoffee-tab@1x.png 1x,
+                        ./images/products-icecoffee-tab@2x.png 2x" 
+                        media="(min-width: 768px)">
+                    
+                        <source srcset="/images/products-icecoffee-mob@1x.png,
+                        ./images/products-icecoffee-mob@2x.png 2x" 
+                        media="(min-width: 480px)">
+                    
+                        <img src="./images/products-icecoffee-mob@1x.png" alt="ice coffee" class="modal-order__checkbox-img">
+                    </picture>
+                    
+                    <span class="modal-order__text">ICE COFFEE</span>
+                </label>
+
+                <input class="modal-order__checkbox" type="checkbox" name="order" value="milkshakes" id="milkshakes">
+                <label class="modal-order__label" for="milkshakes">
+                    <picture>
+                        <source srcset="./images/products-iceshakes-desktop@1x.png 1x,
+                        ./images/products-iceshakes-desktop@2x.png 2x" 
+                        media="(min-width: 1280px)">
+                    
+                        <source srcset="./images/products-iceshakes-tab@1x.png 1x,
+                        ./images/products-iceshakes-tab@2x.png 2x" 
+                        media="(min-width: 768px)">
+                    
+                        <source srcset="/images/products-iceshakes-mob@1x.png,
+                        ./images/products-iceshakes-mob@2x.png 2x" 
+                        media="(min-width: 480px)">
+                    
+                        <img src="./images/products-iceshakes-mob@1x.png" alt="milkshakes" class="modal-order__checkbox-img">
+                    </picture>
+                    
+                    <span class="modal-order__text">MILKSHAKES</span>
+                </label>
+
+            </div>
+            <div class="form-check form__form-check">
+                <input type="checkbox" name="policy" id="policy" class="form-check__policy visually-hidden" />
+                <label for="policy" class="form-check__text">
+                    <span class="form-check__icon"><svg width="16" height="15">
+                            <use href="./images/mob-menu-icons.svg#icon-check"></use>
+                        </svg></span>
+                    I agree to taste an ice cream with a great pleasure</label>
+            </div>
+            <div class="modal-header__button-wrap">
+                <button type="submit" class="modal-header__submit btn">Buy now</button>
+            </div>
+        </form>
+    </div>
+</div>
