@@ -23,4 +23,21 @@
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
+
+  // close mobile menu
+{
+  let tags = document.getElementsByClassName('header__mob-item');
+  let btn = document.querySelector('.buy-btn-mob');
+
+  let fun = function (e) {
+    e.addEventListener('click', toggleMenu);
+    }
+    
+  fun(btn);
+  
+  for (let i = 0; i < tags.length; i++) {
+    fun(tags[i]);
+  }
+}
 })();
+

@@ -31,7 +31,6 @@
                          
         let openButton = document.querySelector(openButtonsArr[i]);
         if (!openButton) {
-            console.log(openButtonsArr[i]);
             continue;
         }
         let closeButton = document.querySelector(closeButtonsArr[i]);
