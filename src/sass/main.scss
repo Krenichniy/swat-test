@@ -2,9 +2,7 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-html {
-  scroll-behavior: smooth;
-}
+
 // Стили для файла с примером HTML-фрагмента
 @import './base/reset';
 @import './utils/mixins';
