@@ -11,8 +11,8 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"PJth":[function(require,module,exports) {
 const t=["#E6CFC1","#F9DE73","#E98525","#C7E7BC","#FFD293","#F24D7D"],a=50,e=[];for(let r=0;r<50;r++){let a=document.createElement("div");a.classList.add("ball"),a.style.background=t[Math.floor(Math.random()*t.length)],a.style.left=`${Math.floor(100*Math.random())}vw`,a.style.top=`${Math.floor(100*Math.random())}vh`,a.style.transform=`scale(${Math.random()})`,a.style.width=`${Math.random()}em`,a.style.height=a.style.width,e.push(a),document.querySelector(".hero").append(a)}e.forEach((t,a,e)=>{let r=Math.random()*(a%2==0?-11:11),o=12*Math.random();t.animate([{transform:"translate(0, 0)"},{transform:`translate(${r}rem, ${o}rem)`}],{duration:2e3*(Math.random()+1),direction:"alternate",fill:"both",iterations:1/0,easing:"ease-in-out"})});
 },{}],"QY1l":[function(require,module,exports) {
-(()=>{const e={openModalBtn:document.querySelector("[data-modal2-open]"),closeModalBtn:document.querySelector("[data-modal2-close]"),modal:document.querySelector("[data-modal2]")};function o(){e.modal.classList.toggle("is-hidden")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o)})();
+(()=>{const e={openModalBtn:document.querySelector("[data-modal2-open]"),closeModalBtn:document.querySelector("[data-modal2-close]"),modal:document.querySelector("[data-modal2]")};e.openModalBtn.addEventListener("click",function(){e.modal.classList.toggle("is-hidden")})})();
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/mobile-menu"),require("./js/modal"),require("./js/buttons"),require("./js/animation-counter"),require("./js/herobg"),require("./js/modal2");
 },{"./sass/main.scss":"clu1","./js/mobile-menu":"sByI","./js/modal":"RSqK","./js/buttons":"vKoR","./js/animation-counter":"Rd4u","./js/herobg":"PJth","./js/modal2":"QY1l"}]},{},["Focm"], null)
-//# sourceMappingURL=/swat-test/src.19f429af.js.map
+//# sourceMappingURL=/swat-test/src.f38aff22.js.map
