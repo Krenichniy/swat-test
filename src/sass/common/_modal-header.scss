@@ -103,7 +103,6 @@ input[type='checkbox'] {
 
 .checkbox__sub-label {
   @include max479 {
-    width: 100%;
     white-space: pre-line;
   }
   text-align: center;
